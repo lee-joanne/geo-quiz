@@ -30,7 +30,31 @@
                 <h2>Welcome to Geo Quiz!</h2>
                 <br>
                 <h3>Test your geography knowledge with our three level quiz</h3>
-                <button class="btn" aria-label="Instructions on how to play the game" type="button"><i class="far fa-question-circle"></i> How To Play</button>
+                <button id="instructions" aria-label="Instructions on how to play the game" type="button"><i class="far fa-question-circle"></i> How To Play</button>
+
+                <!-- HTML code for modal mostly taken from W3 Schools page on modal windows -->
+                <div id="instructions-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close"><i class="far fa-times-circle"></i></span>
+                        <div class="modal-text">
+                            <h2>How To Play</h2>
+                            <br>
+                            <p>Click "Let's Play!" to begin the game. There are three levels, each containing ten questions, for a total of thirty questions.
+                                The questions come in multiple choice, ranging from questions such as general knowledge, identifying flags, to
+                                identifying countries. You must beat the current level to move onto the next level, or else you will have to start over.
+                            </p>
+                            <br>
+                            <p>How to beat the levels:</p>
+                            <ul>
+                                <li>Level 1: Score a total of 6 points</li>
+                                <li>Level 2: Score a total of 12 points</li>
+                                <li>Level 3: Score a total of 20 points</li>
+                            </ul>
+                            <br>
+                            <p>Good luck!</p>
+                        </div>
+                    </div>
+                </div>
                 <br>
                 <button class="btn" aria-label="Start the game" type="button"><i class="fas fa-gamepad"></i> Let's Play!</button>
                 <p>Score: 0</p>
