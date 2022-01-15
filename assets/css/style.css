@@ -50,7 +50,7 @@ button:hover {
     border: 1px solid;
 }
 
-/* modal and modal-content code mostly taken from W3 Schools page on modal windows */
+/* modal and modal-content code mostly taken from W3 Schools page on modal windows: https://www.w3schools.com/howto/howto_css_modals.asp */
 .modal {
     display: none;
     position: fixed;
@@ -75,7 +75,7 @@ button:hover {
     clear: both;
 }
 
-/* close, close:hover, and close:focus code mostly taken from W3 Schools site on modal windows */
+/* close, close:hover, and close:focus code mostly taken from W3 Schools site on modal windows: https://www.w3schools.com/howto/howto_css_modals.asp */
 .close {
     color: white;
     float: left;
