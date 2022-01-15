@@ -1,0 +1,48 @@
+/* Google Fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Raleway&display=swap');
+
+/* set default layout */
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body {
+    font-family: Dosis, sans-serif;
+    color: black;
+}
+
+.game-logo {
+    text-transform: uppercase;
+    float: left;
+    margin: 15px;
+    font-size: 300%;
+    color: #00384F;
+}
+
+.game-section {
+    overflow: hidden;
+    background: url(../images/game-background.jpeg) no-repeat center / cover;
+    height: 700px;
+    width: 100%;
+}
+
+.footer-socialmedia {
+    text-align: center;
+}
+
+.footer-socialmedia>li {
+    display: inline;
+}
+
+.footer-socialmedia i {
+    font-size: 175%;
+    padding: 2% 8%;
+    margin: 1%;
+    color: black;
+}
+
+.footer-socialmedia i:hover {
+    color: #00384F;
+}

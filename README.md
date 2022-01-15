@@ -41,7 +41,7 @@
     - NA
 
 * ### Wireframes
-  - Low-fidelity wireframes have been created using the program Sketch.
+  - Low-fidelity wireframes have been created using the program Balsamiq.
 
     - Desktop Wireframe - [View](assets/documentation/desktop-wireframe.png) 
 
