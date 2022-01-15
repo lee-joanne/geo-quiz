@@ -10,7 +10,6 @@
 
 body {
     font-family: Dosis, sans-serif;
-    color: black;
 }
 
 header > a {
@@ -34,6 +33,7 @@ p {
 
 button {
     color:#5D748D;
+    font-family: inherit;
     background-color: white;
     width: 200px;
     height: 60px;
