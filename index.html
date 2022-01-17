@@ -57,12 +57,19 @@
                 </div>
                 <br>
                 <button id="start" aria-label="Start the game" type="button"><i class="fas fa-gamepad"></i> Let's Play!</button>
-                <div id="question-area"></div>
+                <div id="question-area">
+                    <button class="btn btn-a" data-type="A"></button>
+                    <button class="btn btn-b" data-type="B"></button>
+                    <button class="btn btn-c" data-type="C"></button>
+                    <button class="btn btn-d" data-type="D"></button>
+                </div>
+                <button id="next-question">Submit</button>
+                <button id="submit">Submit</button>
                 <div id="level-one-complete"></div>
                 <div id="level-two-complete"></div>
                 <div id="level-three-complete"></div>
                 <div id="game-over"></div>
-                <p class="scores">Score: <span id="score">0</span></p>
+                <p id="scores">Score: <span id="score">0</span></p>
             </div>
         </section>
     </div>
