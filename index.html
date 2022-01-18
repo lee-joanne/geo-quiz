@@ -57,18 +57,44 @@
                 </div>
                 <br>
                 <button id="start" aria-label="Start the game" type="button"><i class="fas fa-gamepad"></i> Let's Play!</button>
+
                 <div id="question-area">
-                    <button class="btn btn-a" data-type="A"></button>
-                    <button class="btn btn-b" data-type="B"></button>
-                    <button class="btn btn-c" data-type="C"></button>
-                    <button class="btn btn-d" data-type="D"></button>
+                    <button class="choice-btn btn-a" data-type="a"></button>
+                    <button class="choice-btn btn-b" data-type="b"></button>
+                    <button class="choice-btn btn-c" data-type="c"></button>
+                    <button class="choice-btn btn-d" data-type="d"></button>
                 </div>
-                <button id="next-question">Submit</button>
-                <button id="submit">Submit</button>
-                <div id="level-one-complete"></div>
-                <div id="level-two-complete"></div>
-                <div id="level-three-complete"></div>
-                <div id="game-over"></div>
+
+                <button id="next-question" data-type="next-question">Submit</button>
+                <button id="submit" data-type="submit">Submit</button>
+
+                <div id="level-one-complete">
+                    <div class="end-message">
+                        <h2>Level 1 Complete! <i class="far fa-thumbs-up"></i></h2>
+                        <p>Well done on completing level one. Move onto the next round?</p>
+                    </div>
+                </div>
+
+                <div id="level-two-complete">
+                    <div class="end-message">
+                        <h2>Level 2 Complete! <i class="far fa-thumbs-up"></i></h2>
+                        <p>Well done on completing level two. Move onto the next round?</p>
+                    </div>
+                </div>
+
+                <div id="level-three-complete">
+                    <div class="end-message">
+                        <h2>Game complete! <i class="fas fa-medal"></i></h2>
+                        <p>Well done! You are truly a geography champion.</p>
+                    </div>
+                </div>
+
+                <div id="game-over">
+                    <div class="end-message">
+                        <h2>Game Over <i class="far fa-thumbs-down"></i></h2>
+                        <p>Oh no! Better luck next time.</p>
+                    </div>
+                </div>
                 <p id="scores">Score: <span id="score">0</span></p>
             </div>
         </section>

@@ -103,7 +103,7 @@ button:hover {
     top: 25px;
 }
 
-.game-container {
+.game-container, .question-area {
     padding-top: 50px;
     height: 450px;
     width: 50%;

@@ -1,29 +1,18 @@
-let quizContainer = document.getElementById("question-area");
-let nextQuestion = document.getElementById("next-question");
-let submitQuiz = document.getElementById("submit");
-let levelOneDone = document.getElementById("level-one-complete");
-let levelTwoDone = document.getElementById("level-two-complete");
-let levelThreeDone = document.getElementById("level-three-complete");
-let gameOver = document.getElementById("game-over");
 let score = document.getElementById("scores");
 let start = document.getElementById("start");
-let buttons = document.getElementsByClassName("btn");
+let buttons = document.getElementsByClassName("choice-btn");
 
-/*
-for (let i = 0; i < buttons.length; i++){
+document.addEventListener("DOMContentLoaded", function() {
+  start.addEventListener("click", runGame);
+});
 
-}
-*/
-
-start.addEventListener("click", runGame);
-
-function runGame() {
-  
+function runGame(levelOne){
+  let questionArea = document.getElementById("question-area");
 }
 
-function levelComplete(){
+//let levelOne = 
 
-}
+//research syntax for nested arrays
 
 /* JavaScript code on modal window and close taken from W3 Schools page on modal windows: https://www.w3schools.com/howto/howto_css_modals.asp */
 let modal = document.getElementById("instructions-modal");
