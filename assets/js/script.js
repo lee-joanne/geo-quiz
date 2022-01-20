@@ -1,14 +1,14 @@
 let score = document.getElementById("scores");
-let start = document.getElementById("start");
+let startButton = document.getElementById("start");
 let buttons = document.getElementsByClassName("choice-btn");
+let questionArea = document.getElementsByClass("question-area");
 
-document.addEventListener("DOMContentLoaded", function() {
-  start.addEventListener("click", runGame);
-});
+start.addEventListener("click", runGame);
 
 function runGame(levelOne){
-  let questionArea = document.getElementById("question-area");
+
 }
+
 
 let levelOne = {
   question: "What is the capital city of Germany?",
