@@ -27,34 +27,36 @@
         <!-- game section -->
         <section class="game-section">
             <div class="game-container">
-                <h2>Welcome to Geo Quiz!</h2>
-                <br>
-                <h3>Test your geography knowledge with our three level quiz</h3>
-                <button id="instructions" aria-label="Instructions on how to play the game" type="button"><i class="far fa-question-circle"></i> How To Play</button>
+                <div id="homepage-container">
+                    <h2>Welcome to Geo Quiz!</h2>
+                    <br>
+                    <h3>Test your geography knowledge with our three level quiz</h3>
+                    <button id="instructions" aria-label="Instructions on how to play the game" type="button"><i class="far fa-question-circle"></i> How To Play</button>
 
-                <!-- HTML code for modal mostly taken from W3 Schools page on modal windows: https://www.w3schools.com/howto/howto_css_modals.asp -->
-                <div id="instructions-modal" class="modal">
-                    <div class="modal-content">
-                        <span class="close" aria-label="Close the instructions"><i class="far fa-times-circle"></i></span>
-                        <div class="modal-text">
-                            <h2>How To Play</h2>
-                            <br>
-                            <p>Click "Let's Play!" to begin the game. There are three levels, each containing ten questions, for a total of thirty multiple choice questions. You must beat the current level to move onto the next level, or else you will have to start over.
-                            </p>
-                            <br>
-                            <p>How to beat the levels:</p>
-                            <ul>
-                                <li>Level 1: Score a total of 6 points</li>
-                                <li>Level 2: Score a total of 12 points</li>
-                                <li>Level 3: Score a total of 20 points</li>
-                            </ul>
-                            <br>
-                            <p>Good luck!</p>
+                    <!-- HTML code for modal mostly taken from W3 Schools page on modal windows: https://www.w3schools.com/howto/howto_css_modals.asp -->
+                    <div id="instructions-modal" class="modal">
+                        <div class="modal-content">
+                            <span class="close" aria-label="Close the instructions"><i class="far fa-times-circle"></i></span>
+                            <div class="modal-text">
+                                <h2>How To Play</h2>
+                                <br>
+                                <p>Click "Let's Play!" to begin the game. There are three levels, each containing ten questions, for a total of thirty multiple choice questions. You must beat the current level to move onto the next level, or else you will have to start over.
+                                </p>
+                                <br>
+                                <p>How to beat the levels:</p>
+                                <ul>
+                                    <li>Level 1: Score a total of 6 points</li>
+                                    <li>Level 2: Score a total of 12 points</li>
+                                    <li>Level 3: Score a total of 20 points</li>
+                                </ul>
+                                <br>
+                                <p>Good luck!</p>
+                            </div>
                         </div>
                     </div>
+                    <br>
+                    <button id="start" aria-label="Start the game" type="button"><i class="fas fa-gamepad"></i> Let's Play!</button>
                 </div>
-                <br>
-                <button id="start" aria-label="Start the game" type="button"><i class="fas fa-gamepad"></i> Let's Play!</button>
 
                 <div class="question-area"> 
                     <button class="choice-btn btn-a" data-type="a"></button>

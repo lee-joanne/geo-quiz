@@ -1,12 +1,16 @@
 let score = document.getElementById("scores");
 let startButton = document.getElementById("start");
-let buttons = document.getElementsByClassName("choice-btn");
+let choiceButtons = document.getElementsByClassName("choice-btn");
 let questionArea = document.getElementsByClassName("question-area");
 
-start.addEventListener("click", runGame);
+startButton.addEventListener("click", runGame);
 
 function runGame(levelOne){
+ //let homepageContainer = document.getElementsByClassName("game-container")[0];
+ // homepageContainer.classList.remove('game-container');
 
+let homepageContainer = document.getElementById("homepage-container");
+homepageContainer.classList.add('hide');
 }
 
 
