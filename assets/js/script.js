@@ -8,6 +8,7 @@ startButton.addEventListener("click", runGame);
 function runGame(levelOne){
  //let homepageContainer = document.getElementsByClassName("game-container")[0];
  // homepageContainer.classList.remove('game-container');
+ // find way in DOM content loaded to hide the other extra buttons text!
 
 let homepageContainer = document.getElementById("homepage-container");
 homepageContainer.classList.add('hide');
@@ -44,7 +45,7 @@ let levelOne = {
   answer: "Switzerland",
 
   question: "Which country has the flag with the meaning 'circle of the sun'?",
-  options: ["Brazil", "Argentina", "Japan", "Laos"],
+  options: ["Brazil", "South Korea", "Japan", "Laos"],
   answer: "Japan",
 
   question: "Which country has the most timezones?",
