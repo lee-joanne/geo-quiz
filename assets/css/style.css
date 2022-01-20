@@ -33,9 +33,10 @@ ul {
 }
 
 button {
-    color:#5D748D;
+    color:white;
     font-family: inherit;
-    background-color: white;
+    background-color: #5D748D;
+    border: 1px solid;
     width: 200px;
     height: 60px;
     font-size: 18px;
@@ -45,9 +46,8 @@ button {
 }
 
 button:hover {
-    color: white;
-    background-color: #5D748D;
-    border: 1px solid;
+    color: #5D748D;
+    background-color: white;
 }
 
 /* modal and modal-content code mostly taken from W3 Schools page on modal windows: https://www.w3schools.com/howto/howto_css_modals.asp */
@@ -103,7 +103,7 @@ button:hover {
     top: 25px;
 }
 
-.game-container, .question-area {
+.game-container {
     padding-top: 50px;
     height: 450px;
     width: 50%;
