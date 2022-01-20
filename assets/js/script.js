@@ -1,7 +1,7 @@
 let score = document.getElementById("scores");
 let startButton = document.getElementById("start");
 let buttons = document.getElementsByClassName("choice-btn");
-let questionArea = document.getElementsByClass("question-area");
+let questionArea = document.getElementsByClassName("question-area");
 
 start.addEventListener("click", runGame);
 
@@ -53,22 +53,21 @@ let levelOne = {
 }
 
 
-
 /* JavaScript code on modal window and close taken from W3 Schools page on modal windows: https://www.w3schools.com/howto/howto_css_modals.asp */
 let modal = document.getElementById("instructions-modal");
-let btn = document.getElementById("instructions");
+let instructionsBtn = document.getElementById("instructions");
 let closeButton = document.getElementsByClassName("close")[0];
 
-btn.onclick = function() {
+instructionsBtn.addEventListener("click", function(){
   modal.style.display = "block";
-}
+})
 
-closeButton.onclick = function() {
+closeButton.addEventListener("click", function(){
   modal.style.display = "none";
-}
+})
 
-window.onclick = function(event) {
+window.addEventListener("click", function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
-}
+})
