@@ -58,7 +58,7 @@
                     <button id="start" aria-label="Start the game" type="button"><i class="fas fa-gamepad"></i> Let's Play!</button>
                 </div>
 
-                <div class="question-area"> 
+                <div id="question-area" class="hide"> 
                     <button class="choice-btn btn-a" data-type="a"></button>
                     <button class="choice-btn btn-b" data-type="b"></button>
                     <button class="choice-btn btn-c" data-type="c"></button>
@@ -94,6 +94,9 @@
                         <p>Oh no! Better luck next time.</p>
                     </div>
                 </div>
+
+                <button id="play-again" data-type="submit">Play again?</button>
+
                 <p id="scores">Score: <span id="score">0</span></p>
             </div>
         </section>

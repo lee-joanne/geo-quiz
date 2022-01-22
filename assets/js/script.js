@@ -1,17 +1,33 @@
 let score = document.getElementById("scores");
 let startButton = document.getElementById("start");
 let choiceButtons = document.getElementsByClassName("choice-btn");
-let questionArea = document.getElementsByClassName("question-area");
+let questionArea = document.getElementById("question-area");
+let levelOneComplete = document.getElementById("level-one-complete");
+let levelTwoComplete = document.getElementById("level-two-complete");
+let levelThreeComplete = document.getElementById("level-three-complete");
+let submitButton = document.getElementById("submit");
+let gameOver = document.getElementById("game-over");
+let scores = document.getElementById("scores");
+let playAgainButton = document.getElementById("play-again");
+
+document.addEventListener('DOMContentLoaded', function () {
+  levelOneComplete.style.display = 'none';
+  levelTwoComplete.style.display = 'none';
+  levelThreeComplete.style.display = 'none';
+  submitButton.style.display = 'none';
+  gameOver.style.display = 'none';
+  scores.style.display = 'none';
+  playAgainButton.style.display = 'none';
+});
 
 startButton.addEventListener("click", runGame);
 
-function runGame(levelOne){
- //let homepageContainer = document.getElementsByClassName("game-container")[0];
- // homepageContainer.classList.remove('game-container');
- // find way in DOM content loaded to hide the other extra buttons text!
 
+function runGame(levelOne){
 let homepageContainer = document.getElementById("homepage-container");
 homepageContainer.classList.add('hide');
+question
+
 }
 
 
