@@ -10,6 +10,7 @@
 
 body {
     font-family: Dosis, sans-serif;
+    font-size: 20px;
 }
 
 header > a {
@@ -39,7 +40,7 @@ button {
     border: 1px solid;
     width: 200px;
     height: 60px;
-    font-size: 18px;
+    font-size: 20px;
     display: block;
     margin: 0 auto;
     cursor: pointer;
@@ -67,8 +68,8 @@ button:hover {
     margin: 10% auto;
     padding: 20px;
     border: 1px solid #5D748D;
-    width: 35%;
-    height: 325px;
+    width: 40%;
+    height: 400px;
 }
 
 .modal-text {
@@ -79,15 +80,14 @@ button:hover {
 .close {
     color: white;
     float: left;
-    font-size: 20px;
     font-weight: bold;
-  }
-  
+}
+
 .close:hover,
 .close:focus {
     color: black;
     cursor: pointer;
-  }
+}
 
 .game-logo {
     text-transform: uppercase;
@@ -111,12 +111,40 @@ button:hover {
     position: absolute;
 }
 
+.button-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 5px;
+    row-gap: 30px;
+    flex-wrap: wrap;
+}
+
+#question-text {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 3%;
+    margin-bottom: 10%;
+}
+
+#next-question {
+    margin-top: 8%;
+}
+
+.choice-btn {
+    font-size: 20px;
+}
+
 .hide {
     display: none;
 }
 
-.game-container > p {
-    margin-top: 120px;
+.correct {
+    background-color: green;
+}
+
+.incorrect {
+    background-color: red;
 }
 
 .background {

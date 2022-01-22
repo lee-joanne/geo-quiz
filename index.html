@@ -58,47 +58,50 @@
                     <button id="start" aria-label="Start the game" type="button"><i class="fas fa-gamepad"></i> Let's Play!</button>
                 </div>
 
+                <p id="scores" class="hide">Score: <span id="score">0</span></p>
+
                 <div id="question-area" class="hide"> 
                     <div id="question-text"></div>
-                    <button class="choice-btn" id="a" data-type="a"></button>
-                    <button class="choice-btn" id="b" data-type="b"></button>
-                    <button class="choice-btn" id="c" data-type="c"></button>
-                    <button class="choice-btn" id="d" data-type="d"></button>
+                    <div class="button-container">
+                        <button class="choice-btn" id="a" data-type="a"></button>
+                        <button class="choice-btn" id="b" data-type="b"></button>
+                        <button class="choice-btn" id="c" data-type="c"></button>
+                        <button class="choice-btn" id="d" data-type="d"></button>
+                    </div>
                 </div>
 
-                <button id="submit" data-type="submit">Submit</button>
+                <button id="next-question" class="hide" data-type="submit">Next Question</button>
+                <button id="next-level" class="hide" data-type="submit">Next Level</button>
 
-                <div id="level-one-complete">
+                <div id="level-one-complete" class="hide">
                     <div class="end-message">
                         <h2>Level 1 Complete! <i class="far fa-thumbs-up"></i></h2>
                         <p>Well done on completing level one. Move onto the next round?</p>
                     </div>
                 </div>
 
-                <div id="level-two-complete">
+                <div id="level-two-complete" class="hide">
                     <div class="end-message">
                         <h2>Level 2 Complete! <i class="far fa-thumbs-up"></i></h2>
                         <p>Well done on completing level two. Move onto the next round?</p>
                     </div>
                 </div>
 
-                <div id="level-three-complete">
+                <div id="level-three-complete" class="hide">
                     <div class="end-message">
                         <h2>Game complete! <i class="fas fa-medal"></i></h2>
                         <p>Well done! You are truly a geography champion.</p>
                     </div>
                 </div>
 
-                <div id="game-over">
+                <div id="game-over" class="hide">
                     <div class="end-message">
                         <h2>Game Over <i class="far fa-thumbs-down"></i></h2>
                         <p>Oh no! Better luck next time.</p>
                     </div>
                 </div>
 
-                <button id="play-again" data-type="submit">Play again?</button>
-
-                <p id="scores">Score: <span id="score">0</span></p>
+                <button id="play-again" class="hide" data-type="submit">Play again?</button>
             </div>
         </section>
     </div>

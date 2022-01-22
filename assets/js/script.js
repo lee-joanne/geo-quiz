@@ -9,24 +9,12 @@ let questionArea = document.getElementById("question-area");
 let levelOneComplete = document.getElementById("level-one-complete");
 let levelTwoComplete = document.getElementById("level-two-complete");
 let levelThreeComplete = document.getElementById("level-three-complete");
-let submitButton = document.getElementById("submit");
+let nextLevel = document.getElementById("next-level");
 let gameOver = document.getElementById("game-over");
 let scores = document.getElementById("scores");
 let playAgainButton = document.getElementById("play-again");
 let questionText = document.getElementById("question-text");
-
-document.addEventListener('DOMContentLoaded', function () {
-  levelOneComplete.classList.add('hide');
-  levelTwoComplete.classList.add('hide');
-  levelThreeComplete.classList.add('hide');
-  submitButton.classList.add('hide');
-  gameOver.classList.add('hide');
-  scores.classList.add('hide');
-  playAgainButton.classList.add('hide');
-});
-
-//add classes into html and .classList.remove after
-// style choice-btn css afterwards
+let nextQuestion = document.getElementById("next-question");
 
 startButton.addEventListener("click", runLevelOne);
 
@@ -35,24 +23,23 @@ function runLevelOne(){
   let homepageContainer = document.getElementById("homepage-container");
   homepageContainer.classList.add('hide');
   questionArea.classList.remove('hide');
+  scores.classList.remove('hide');
   // step 1: pull up the first question
   let currentQuestion = levelOne[0];
   console.table(currentQuestion);
 
   // step 2: display question
   questionText.textContent = currentQuestion.question;
-  // add style
-
-  console.log(currentQuestion.options);
 
   function checkAnswer(e){
+    nextQuestion.classList.remove('hide');
     if (e.target.getAttribute('data-type') === currentQuestion.answer) {
       alert("Good job! You got it right :)");
     } else {
       alert(`Sorry :( The answer was ${currentQuestion.answer}`);
     }
   }
-  //boolean 
+  //boolean
 
   for (let i = 0; i < choiceButtons.length; i++) {
     choiceButtons[i].textContent = currentQuestion.options[i];
