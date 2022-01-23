@@ -190,12 +190,12 @@ button, #question-text, .choice-btn {
 
 }
 
-/* for media screens 700px wide and down */
+/* for media screens 705px wide and down */
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 705px) {
 
 button {
-    width: 150px;
+    width: 200px;
     height: 50px;
 }
     
@@ -211,7 +211,6 @@ button {
 .footer-socialmedia i {
     padding: 6% 15%;
 }
-
 
 }
 
@@ -229,6 +228,14 @@ button, #question-text, .choice-btn {
 
 .background {
     height: 800px;
+}
+
+.game-container {
+    height: 500px;
+}
+
+#next-question {
+    width: 150px;
 }
 
 }
