@@ -129,7 +129,15 @@ button:hover {
 
 #next-question {
     margin-top: 8%;
+    background-color: #254153;
 }
+
+#next-question:hover {
+    color: #254153;
+    background-color: white;
+}
+
+
 
 .choice-btn {
     font-size: inherit;
