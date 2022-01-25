@@ -85,17 +85,22 @@ let currentQuestion = {};
 function runLevelOne(){
   showGameBoard();
   showQuestion();
-}
+};
 
 /**
  * Homepage div and contents will hide when level one runs. The game board will then appear.
  */
+function runLevelOne(){
+  showGameBoard();
+  showNextQuestion();
+};
+
 function showGameBoard(){
   let homepageContainer = document.getElementById("homepage-container");
   homepageContainer.classList.add('hide');
   questionArea.classList.remove('hide');
   scores.classList.remove('hide');
-}
+};
 
 /**
  * The game will loop through the questions in the question array and the choices will iterate
