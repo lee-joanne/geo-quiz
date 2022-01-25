@@ -74,8 +74,22 @@ let levelOne = [
 ]
 
 startButton.addEventListener("click", runLevelOne);
-let currentQuestionIndex = 0;
 let currentQuestion = {};
+
+// This code on creating random numbers for the quiz to shuffle is mostly taken from Stack Overflow: https://stackoverflow.com/questions/18806210/generating-non-repeating-random-numbers-in-js
+var nums = [0,1,2,3,4,5,6,7,8,9],
+ranNums = [],
+i = nums.length,
+j = 0;
+
+while (i--) {
+j = Math.floor(Math.random() * (i+1));
+ranNums.push(nums[j]);
+nums.splice(j,1);
+}
+
+let x = 1;
+let currentQuestionIndex = ranNums[0];
 
 /**
  * When startButton is clicked, runLevelOne function will execute which will call showGameBoard function
@@ -86,6 +100,9 @@ function runLevelOne(){
   showQuestion();
 };
 
+/**
+ * The homepage div and contents will hide and question area will appear
+ */
 function showGameBoard(){
   let homepageContainer = document.getElementById("homepage-container");
   homepageContainer.classList.add('hide');
@@ -98,6 +115,7 @@ function showGameBoard(){
  * through the multiple choice buttons. 
  */
 function showQuestion(){
+
   currentQuestion = levelOne[ currentQuestionIndex ];
   questionText.textContent = currentQuestion.question;
   
@@ -108,6 +126,9 @@ function showQuestion(){
   }
 }
 
+/**
+ * The score for the game will increment each time the user gets a correct answer
+ */
 function incrementScore(){
   let previousScore = parseInt(document.getElementById("score").innerText);
   document.getElementById("score").innerText = ++previousScore;
@@ -118,6 +139,7 @@ function incrementScore(){
  * Depending on the answer, a certain alert message will show. 
  */
 function checkAnswer(e){
+  
   nextQuestion.classList.remove('hide');
   if (e.target.getAttribute('data-type') === currentQuestion.answer) {
     //alert("Good job! You got it right :)")
@@ -125,10 +147,14 @@ function checkAnswer(e){
   } else {
     //alert(`Sorry :( The answer was ${currentQuestion.answer}`);
   }
-  currentQuestionIndex = Math.floor(Math.random() * levelOne.length);
+  currentQuestionIndex = ranNums[x];
+  x = x + 1;
   selectNextQuestion();
 }
 
+/**
+ * Function created for the 'next question' button to appear and pull up the next question
+ */
 function selectNextQuestion(){
   nextQuestion.addEventListener("click", showQuestion);
 }
@@ -143,7 +169,7 @@ instructionsBtn.addEventListener("click", function(){
 })
 
 closeButton.addEventListener("click", function(){
-  modal.style.display = "none";
+  modal.style.display = "none";oikm
 })
 
 window.addEventListener("click", function(event) {
@@ -151,27 +177,3 @@ window.addEventListener("click", function(event) {
     modal.style.display = "none";
   }
 })
-
-/*function checkAnswer(e){
-  nextQuestion.classList.remove('hide');
-  if (e.target.getAttribute('data-type') === currentQuestion.answer) {
-    //alert("Good job! You got it right :)")
-    incrementScore();
-  } else {
-    //alert(`Sorry :( The answer was ${currentQuestion.answer}`);
-  }
-  var nums = [0,1,2,3,4,5,6,7,8,9],
-    ranNums = [],
-    i = nums.length,
-    j = 0;
-
-while (i--) {
-    j = Math.floor(Math.random() * (i+1));
-    ranNums.push(nums[j]);
-    nums.splice(j,1);
-}
-  currentQuestionIndex = ranNums[i]
-  selectNextQuestion();
-}
-
-*/
