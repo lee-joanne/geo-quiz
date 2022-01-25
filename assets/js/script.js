@@ -1,7 +1,3 @@
-let levelOneIndex = 0;
-//let levelTwoIndex = 0;
-//let levelThreeIndex = 0;
-
 let score = document.getElementById("scores");
 let startButton = document.getElementById("start");
 let choiceButtons = document.getElementsByClassName("choice-btn");
@@ -15,51 +11,6 @@ let scores = document.getElementById("scores");
 let playAgainButton = document.getElementById("play-again");
 let questionText = document.getElementById("question-text");
 let nextQuestion = document.getElementById("next-question");
-
-startButton.addEventListener("click", runLevelOne);
-
-function runLevelOne(){
-//shufflequestions();
-  let homepageContainer = document.getElementById("homepage-container");
-  homepageContainer.classList.add('hide');
-  questionArea.classList.remove('hide');
-  scores.classList.remove('hide');
-  // step 1: pull up the first question
-  let currentQuestion = levelOne[0];
-  console.table(currentQuestion);
-
-  // step 2: display question
-  questionText.textContent = currentQuestion.question;
-
-  function checkAnswer(e){
-    nextQuestion.classList.remove('hide');
-    if (e.target.getAttribute('data-type') === currentQuestion.answer) {
-      alert("Good job! You got it right :)");
-    } else {
-      alert(`Sorry :( The answer was ${currentQuestion.answer}`);
-    }
-  }
-  //boolean
-
-  for (let i = 0; i < choiceButtons.length; i++) {
-    choiceButtons[i].textContent = currentQuestion.options[i];
-    choiceButtons[i].setAttribute("data-type", currentQuestion.options[i]);
-    choiceButtons[i].addEventListener("click", checkAnswer);
-  }
-}
-
-
-  //choiceButtons.textContent = currentQuestion.options;
-
-
-
-  // step 3: select the button that you think is the answer
-  // step 4: click "submit"
-  // step 4.25: check answer 
-  // step 4.5: an alert at the top to validate whether answer is correct or not, with correct answer.
-  // steo 5: move onto the next question
-  // step 6: score updates
-
 
 let levelOne = [
   { 
@@ -123,6 +74,59 @@ let levelOne = [
   },
 ]
 
+startButton.addEventListener("click", runLevelOne);
+let currentQuestionIndex = 0;
+let currentQuestion = {};
+
+/**
+ * When startButton is clicked, runLevelOne function will execute which will call showGameBoard function
+ * and showNextQuestion function.
+ */
+function runLevelOne(){
+  showGameBoard();
+  showQuestion();
+}
+
+/**
+ * Homepage div and contents will hide when level one runs. The game board will then appear.
+ */
+function showGameBoard(){
+  let homepageContainer = document.getElementById("homepage-container");
+  homepageContainer.classList.add('hide');
+  questionArea.classList.remove('hide');
+  scores.classList.remove('hide');
+}
+
+/**
+ * The game will loop through the questions in the question array and the choices will iterate
+ * through the multiple choice buttons. 
+ */
+function showQuestion(){
+  currentQuestion = levelOne[ currentQuestionIndex ];
+  questionText.textContent = currentQuestion.question;
+
+  for (let i = 0; i < choiceButtons.length; i++) {
+    choiceButtons[i].textContent = currentQuestion.options[i];
+    choiceButtons[i].setAttribute("data-type", currentQuestion.options[i]);
+    choiceButtons[i].addEventListener("click", checkAnswer);
+  }
+  checkAnswer(e);
+}
+
+/**
+ * The user's input will be checked whether they have selected the correct or incorrect answer.
+ * Depending on the answer, a certain alert message will show. 
+ */
+function checkAnswer(e){
+  nextQuestion.classList.remove('hide');
+  if (e.target.getAttribute('data-type') === currentQuestion.answer) {
+    alert("Good job! You got it right :)");
+  } else {
+    alert(`Sorry :( The answer was ${currentQuestion.answer}`);
+  }
+  currentQuestionIndex = currentQuestionIndex + 1;
+  showQuestion();
+}
 
 /* JavaScript code on modal window and close taken from W3 Schools page on modal windows: https://www.w3schools.com/howto/howto_css_modals.asp */
 let modal = document.getElementById("instructions-modal");
