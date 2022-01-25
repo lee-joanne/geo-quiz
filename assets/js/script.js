@@ -1,4 +1,3 @@
-let score = document.getElementById("scores");
 let startButton = document.getElementById("start");
 let choiceButtons = document.getElementsByClassName("choice-btn");
 let questionArea = document.getElementById("question-area");
@@ -87,14 +86,6 @@ function runLevelOne(){
   showQuestion();
 };
 
-/**
- * Homepage div and contents will hide when level one runs. The game board will then appear.
- */
-function runLevelOne(){
-  showGameBoard();
-  showQuestion();
-};
-
 function showGameBoard(){
   let homepageContainer = document.getElementById("homepage-container");
   homepageContainer.classList.add('hide');
@@ -109,13 +100,17 @@ function showGameBoard(){
 function showQuestion(){
   currentQuestion = levelOne[ currentQuestionIndex ];
   questionText.textContent = currentQuestion.question;
-
+  
   for (let i = 0; i < choiceButtons.length; i++) {
     choiceButtons[i].textContent = currentQuestion.options[i];
     choiceButtons[i].setAttribute("data-type", currentQuestion.options[i]);
     choiceButtons[i].addEventListener("click", checkAnswer);
   }
-  checkAnswer(e);
+}
+
+function incrementScore(){
+  let previousScore = parseInt(document.getElementById("score").innerText);
+  document.getElementById("score").innerText = ++previousScore;
 }
 
 /**
@@ -125,12 +120,17 @@ function showQuestion(){
 function checkAnswer(e){
   nextQuestion.classList.remove('hide');
   if (e.target.getAttribute('data-type') === currentQuestion.answer) {
-    alert("Good job! You got it right :)");
+    //alert("Good job! You got it right :)")
+    incrementScore();
   } else {
-    alert(`Sorry :( The answer was ${currentQuestion.answer}`);
+    //alert(`Sorry :( The answer was ${currentQuestion.answer}`);
   }
-  currentQuestionIndex = currentQuestionIndex + 1;
-  showQuestion();
+  currentQuestionIndex = Math.floor(Math.random() * levelOne.length);
+  selectNextQuestion();
+}
+
+function selectNextQuestion(){
+  nextQuestion.addEventListener("click", showQuestion);
 }
 
 /* JavaScript code on modal window and close taken from W3 Schools page on modal windows: https://www.w3schools.com/howto/howto_css_modals.asp */
@@ -151,3 +151,27 @@ window.addEventListener("click", function(event) {
     modal.style.display = "none";
   }
 })
+
+/*function checkAnswer(e){
+  nextQuestion.classList.remove('hide');
+  if (e.target.getAttribute('data-type') === currentQuestion.answer) {
+    //alert("Good job! You got it right :)")
+    incrementScore();
+  } else {
+    //alert(`Sorry :( The answer was ${currentQuestion.answer}`);
+  }
+  var nums = [0,1,2,3,4,5,6,7,8,9],
+    ranNums = [],
+    i = nums.length,
+    j = 0;
+
+while (i--) {
+    j = Math.floor(Math.random() * (i+1));
+    ranNums.push(nums[j]);
+    nums.splice(j,1);
+}
+  currentQuestionIndex = ranNums[i]
+  selectNextQuestion();
+}
+
+*/
