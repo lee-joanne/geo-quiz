@@ -92,7 +92,7 @@ function runLevelOne(){
  */
 function runLevelOne(){
   showGameBoard();
-  showNextQuestion();
+  showQuestion();
 };
 
 function showGameBoard(){
