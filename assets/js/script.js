@@ -115,7 +115,7 @@ function showGameBoard(){
  * through the multiple choice buttons. 
  */
 function showQuestion(){
-
+  nextQuestion.classList.add('hide');
   currentQuestion = levelOne[ currentQuestionIndex ];
   questionText.textContent = currentQuestion.question;
   
