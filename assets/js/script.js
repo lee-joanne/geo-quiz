@@ -73,6 +73,25 @@ let levelOne = [
   },
 ]
 
+/* JavaScript code on modal window and close taken from W3 Schools page on modal windows: https://www.w3schools.com/howto/howto_css_modals.asp */
+let modal = document.getElementById("instructions-modal");
+let instructionsBtn = document.getElementById("instructions");
+let closeButton = document.getElementsByClassName("close")[0];
+
+instructionsBtn.addEventListener("click", function(){
+  modal.style.display = "block";
+})
+
+closeButton.addEventListener("click", function(){
+  modal.style.display = "none";oikm
+})
+
+window.addEventListener("click", function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+})
+
 startButton.addEventListener("click", runLevelOne);
 let currentQuestion = {};
 
@@ -109,6 +128,38 @@ function showGameBoard(){
   questionArea.classList.remove('hide');
   scores.classList.remove('hide');
 };
+
+/**
+ * When user reaches 6 scores, levelOneComplete div will show to prompt the user to start level two
+ */
+function levelOneCompleted(){
+  levelOneComplete.classList.remove('hide');
+  nextLevel.addEventListener("click", runLevelTwo);
+}
+
+/**
+ * When user meets 12 scores, levelOneComplete div will show to prompt the user to start level three
+ */
+function levelTwoCompleted(){
+  levelTwoComplete.classList.remove('hide');
+  nextLevel.addEventListener("click", runLevelThree);
+}
+
+/**
+ * The user has successfully completed the game and will show game complete div. There will be a button to prompt the user to play again
+ */
+function gameComplete(){
+  levelThreeComplete.classList.remove('hide');
+  playAgainButton.addEventListener("click", runLevelOne);
+}
+
+/**
+ * When user fails to meet conditional scores, the play again div will show to allow the user to play again from level one
+ */
+function playAgain(){
+  gameOver.classList.remove('hide');
+  playAgainButton.addEventListener("click", runLevelOne);
+}
 
 /**
  * The game will loop through the questions in the question array and the choices will iterate
@@ -158,22 +209,3 @@ function checkAnswer(e){
 function selectNextQuestion(){
   nextQuestion.addEventListener("click", showQuestion);
 }
-
-/* JavaScript code on modal window and close taken from W3 Schools page on modal windows: https://www.w3schools.com/howto/howto_css_modals.asp */
-let modal = document.getElementById("instructions-modal");
-let instructionsBtn = document.getElementById("instructions");
-let closeButton = document.getElementsByClassName("close")[0];
-
-instructionsBtn.addEventListener("click", function(){
-  modal.style.display = "block";
-})
-
-closeButton.addEventListener("click", function(){
-  modal.style.display = "none";oikm
-})
-
-window.addEventListener("click", function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-})
