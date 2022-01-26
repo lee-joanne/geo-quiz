@@ -127,17 +127,15 @@ button:hover {
     margin-bottom: 10%;
 }
 
-#next-question {
+#next-question-submit {
     margin-top: 8%;
     background-color: #254153;
 }
 
-#next-question:hover {
+#next-question-submit:hover {
     color: #254153;
     background-color: white;
 }
-
-
 
 .choice-btn {
     font-size: inherit;

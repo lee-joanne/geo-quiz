@@ -9,7 +9,7 @@ let gameOver = document.getElementById("game-over");
 let scores = document.getElementById("scores");
 let playAgainButton = document.getElementById("play-again");
 let questionText = document.getElementById("question-text");
-let nextQuestion = document.getElementById("next-question");
+let nextQuestionSubmit = document.getElementById("next-question-submit");
 
 let levelOne = [
   { 
@@ -49,7 +49,7 @@ let levelOne = [
   },
 
   {
-    question: "Which of these countries are NOT part of the European Union?",
+    question: "Which of these countries is NOT part of the European Union?",
     options: ["Malta", "Lithuania", "Romania", "Switzerland"],
     answer: "Switzerland",
   },
@@ -73,6 +73,68 @@ let levelOne = [
   },
 ]
 
+let levelTwo = [
+  { 
+    question: "What is the smallest country in the world?",
+    options: ["Malta", "Vatican City", "Luxembourg", "Monaco"],
+    answer: "Vatican City",
+  },
+
+  {
+    question: "What is the official language of the United States?",
+    options: ["English", "English and Spanish", "English and French", "Nothing"],
+    answer: "Nothing",
+  },
+
+  { 
+    question: "What are the official languages of Switzerland?",
+    options: ["German, French, English, Italian", "German and Italian", "German, French, Italian, Dutch", "German, French, Italian, Romansh"],
+    answer: "German, French, Italian, Romansh",
+  },
+
+  {
+    question: "How many countries are in the continent of Africa?",
+    options: ["54", "45", "56", "48"],
+    answer: "54",
+  },
+
+  {
+    question: "Which country is the famous archaeological site, Pompeii, located?",
+    options: ["Spain, Croatia, Italy, Catalonia"],
+    answer: "Italy",
+  },
+
+  {
+    question: "Which country is Norilsk, the most depressing city in the world, located?",
+    options: ["Ukraine", "Finland", "Belarus", "Russia"],
+    answer: "Russia",
+  },
+
+  {
+    question: "Which countries border the famous Iguazu Falls?",
+    options: ["Brazil and Argentina", "Brazil, Argentina, Paraquay", "Uruguay, Brazil, Argentina", "Chile and Argentina"],
+    answer: "Brazil, Argentina, Paraquay",
+  },
+
+  {
+    question: "Which continent is Mexico in?",
+    options: ["South America", "Central America", "North America", "Europe"],
+    answer: "North America",
+  },
+
+  {
+    question: "Which country borders fourteen countries but only has one time zone?",
+    options: ["Syria", "Mali", "Nepal", "China"],
+    answer: "China",
+  },
+
+  {
+    question: "What is the capital city of Turkey?",
+    options: ["Ankara", "Istanbul", "Bursa", "Adana"],
+    answer: "Ankara",
+  },
+]
+
 /* JavaScript code on modal window and close taken from W3 Schools page on modal windows: https://www.w3schools.com/howto/howto_css_modals.asp */
 let modal = document.getElementById("instructions-modal");
 let instructionsBtn = document.getElementById("instructions");
@@ -92,9 +154,6 @@ window.addEventListener("click", function(event) {
   }
 })
 
-startButton.addEventListener("click", runLevelOne);
-let currentQuestion = {};
-
 // This code on creating random numbers for the quiz to shuffle is mostly taken from Stack Overflow: https://stackoverflow.com/questions/18806210/generating-non-repeating-random-numbers-in-js
 var nums = [0,1,2,3,4,5,6,7,8,9],
 ranNums = [],
@@ -110,6 +169,9 @@ nums.splice(j,1);
 let x = 1;
 let currentQuestionIndex = ranNums[0];
 
+startButton.addEventListener("click", runLevelOne);
+let currentQuestion = {};
+
 /**
  * When startButton is clicked, runLevelOne function will execute which will call showGameBoard function
  * and showNextQuestion function.
@@ -119,6 +181,11 @@ function runLevelOne(){
   showQuestion();
 };
 
+function runLevelTwo(){
+  showGameBoard();
+  //create function to show game
+}
+
 /**
  * The homepage div and contents will hide and question area will appear
  */
@@ -127,6 +194,10 @@ function showGameBoard(){
   homepageContainer.classList.add('hide');
   questionArea.classList.remove('hide');
   scores.classList.remove('hide');
+  levelOneComplete.classList.add('hide');
+  levelTwoComplete.classList.add('hide');
+  levelThreeComplete.classList.add('hide');
+  gameOver.classList.add('hide');
 };
 
 /**
@@ -166,7 +237,7 @@ function playAgain(){
  * through the multiple choice buttons. 
  */
 function showQuestion(){
-  nextQuestion.classList.add('hide');
+  nextQuestionSubmit.classList.add('hide');
   currentQuestion = levelOne[ currentQuestionIndex ];
   questionText.textContent = currentQuestion.question;
   
@@ -191,7 +262,7 @@ function incrementScore(){
  */
 function checkAnswer(e){
   
-  nextQuestion.classList.remove('hide');
+  nextQuestionSubmit.classList.remove('hide');
   if (e.target.getAttribute('data-type') === currentQuestion.answer) {
     //alert("Good job! You got it right :)")
     incrementScore();
@@ -204,8 +275,9 @@ function checkAnswer(e){
 }
 
 /**
- * Function created for the 'next question' button to appear and pull up the next question
+ * Function created for the 'submit' button to appear and pull up the next question or completed div
  */
 function selectNextQuestion(){
-  nextQuestion.addEventListener("click", showQuestion);
+  nextQuestionSubmit.addEventListener("click", showQuestion);
 }
+
