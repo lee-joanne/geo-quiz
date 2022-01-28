@@ -266,8 +266,8 @@ function showQuestion(){
 
   }
   else{
-
     levelOneCompleted();
+
   }
 
 }
@@ -313,7 +313,6 @@ function checkAnswer(e){
 }
 
 function Counter(){
-
   currentQuestionIndex = ranNums[x];
   x = x + 1;
 
