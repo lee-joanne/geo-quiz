@@ -1,12 +1,16 @@
 /* Google Fonts import */
+
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
 
-/* set default layout */
+/* sets default layout */
+
 * {
     margin: 0;
     padding: 0;
     border: none;
 }
+
+/* body */
 
 body {
     font-family: Dosis, sans-serif;
@@ -51,6 +55,21 @@ button:hover {
     background-color: white;
 }
 
+/* style to hide certain elements when called */
+
+.hide {
+    display: none;
+}
+
+/* main background image */
+
+.background {
+    overflow: hidden;
+    background: url(../images/game-background.jpeg) no-repeat center / cover;
+    height: 950px;
+    width: 100%;
+}
+
 /* modal and modal-content code mostly taken from W3 Schools page on modal windows: https://www.w3schools.com/howto/howto_css_modals.asp */
 .modal {
     display: none;
@@ -88,6 +107,8 @@ button:hover {
     color: black;
     cursor: pointer;
 }
+
+/* game section */
 
 .game-logo {
     text-transform: uppercase;
@@ -141,16 +162,7 @@ button:hover {
     font-size: inherit;
 }
 
-.hide {
-    display: none;
-}
-
-.background {
-    overflow: hidden;
-    background: url(../images/game-background.jpeg) no-repeat center / cover;
-    height: 950px;
-    width: 100%;
-}
+/* footer */
 
 .footer-socialmedia {
     text-align: center;

@@ -27,6 +27,8 @@
         <!-- game section -->
         <section class="game-section">
             <div class="game-container">
+
+                <!-- homepage container: will be hidden when user initiates game -->
                 <div id="homepage-container">
                     <h2>Welcome to Geo Quiz!</h2>
                     <br>
@@ -60,6 +62,7 @@
 
                 <p id="scores" class="hide">Score: <span id="score">0</span></p>
 
+                <!-- question area: will appear when user initiates game -->
                 <div id="question-area" class="hide"> 
                     <div id="question-text"></div>
                     <div class="button-container">
@@ -73,6 +76,7 @@
                 <button id="next-question-submit" class="hide" data-type="submit">Submit</button>
                 <button id="next-level" class="hide" data-type="submit">Next Level</button>
 
+                <!-- level complete messages: appear when user meets certain conditions -->
                 <div id="level-one-complete" class="hide">
                     <div class="end-message">
                         <h2>Level 1 Complete! <i class="far fa-thumbs-up"></i></h2>
@@ -94,6 +98,7 @@
                     </div>
                 </div>
 
+                <!-- game over message: appear when user meets certain condition -->
                 <div id="game-over" class="hide">
                     <div class="end-message">
                         <h2>Game Over <i class="far fa-thumbs-down"></i></h2>
@@ -120,8 +125,8 @@
         </ul>
     </footer>
 
+    <!-- Font Awesome import -->
     <script src="https://kit.fontawesome.com/2747d9050d.js" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
 </body>
-
 </html>

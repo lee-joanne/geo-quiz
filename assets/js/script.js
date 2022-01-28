@@ -1,3 +1,4 @@
+// Global variables
 let startButton = document.getElementById("start");
 let choiceButtons = document.getElementsByClassName("choice-btn");
 let questionArea = document.getElementById("question-area");
@@ -11,6 +12,7 @@ let playAgainButton = document.getElementById("play-again");
 let questionText = document.getElementById("question-text");
 let nextQuestionSubmit = document.getElementById("next-question-submit");
 
+// Quiz questions for level one
 let levelOne = [
   { 
     question: "What is the capital city of Germany?",
@@ -73,6 +75,7 @@ let levelOne = [
   },
 ]
 
+// Quiz questions for level two
 let levelTwo = [
   { 
     question: "What is the smallest country in the world?",
@@ -169,25 +172,37 @@ nums.splice(j,1);
 let x = 1;
 let currentQuestionIndex = ranNums[0];
 
+
+
 startButton.addEventListener("click", runLevelOne);
+
 let currentQuestion = {};
 
 /**
- * When startButton is clicked, runLevelOne function will execute which will call showGameBoard function
- * and showNextQuestion function.
+ * Initiates level one
+ * Runs `showGameBoard()`
+ * Runs `showQuestion()`
  */
 function runLevelOne(){
   showGameBoard();
   showQuestion();
 };
 
+/**
+ * Initiates level two
+ * Runs `showGameBoard()`
+ * Runs `showLevelTwoQuestions()`
+ * 
+ */
 function runLevelTwo(){
   showGameBoard();
+  showLevelTwoQuestions();
   //create function to show game
 }
 
 /**
- * The homepage div and contents will hide and question area will appear
+ * Hides HTML elements: homepage container, level one complete, level two complete, level three complete, game over
+ * Adds HTML elements: question area, scores
  */
 function showGameBoard(){
   let homepageContainer = document.getElementById("homepage-container");
@@ -237,8 +252,29 @@ function playAgain(){
  * through the multiple choice buttons. 
  */
 function showQuestion(){
+
+  if (x < 10) {
+    nextQuestionSubmit.classList.add('hide');
+    currentQuestion = levelOne[ currentQuestionIndex ];
+    questionText.textContent = currentQuestion.question;
+  
+    for (let i = 0; i < choiceButtons.length; i++) {
+      choiceButtons[i].textContent = currentQuestion.options[i];
+      choiceButtons[i].setAttribute("data-type", currentQuestion.options[i]);
+      choiceButtons[i].addEventListener("click", checkAnswer);
+    }
+
+  }
+  else{
+
+    levelOneCompleted();
+  }
+
+}
+
+function showLevelTwoQuestions(){
   nextQuestionSubmit.classList.add('hide');
-  currentQuestion = levelOne[ currentQuestionIndex ];
+  currentQuestion = levelTwo[ currentQuestionIndex ];
   questionText.textContent = currentQuestion.question;
   
   for (let i = 0; i < choiceButtons.length; i++) {
@@ -246,6 +282,7 @@ function showQuestion(){
     choiceButtons[i].setAttribute("data-type", currentQuestion.options[i]);
     choiceButtons[i].addEventListener("click", checkAnswer);
   }
+  
 }
 
 /**
@@ -269,9 +306,17 @@ function checkAnswer(e){
   } else {
     //alert(`Sorry :( The answer was ${currentQuestion.answer}`);
   }
+  
+  Counter()
+  selectNextQuestion();
+
+}
+
+function Counter(){
+
   currentQuestionIndex = ranNums[x];
   x = x + 1;
-  selectNextQuestion();
+
 }
 
 /**
