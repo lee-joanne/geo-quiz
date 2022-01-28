@@ -254,9 +254,12 @@ function playAgain(){
   playAgainButton.addEventListener("click", runLevelOne);
 }
 
+/**
+ * Enable the choiceButtons
+ */
 function enabledAndBindEventListenerChoiceButtons(){
   for (let i = 0; i < choiceButtons.length; i++) {
-    choiceButtons[i].enabled = true;
+    choiceButtons[i].disabled = false;
     choiceButtons[i].addEventListener("click", checkAnswer);
   }
 }
@@ -298,6 +301,7 @@ function showLevelTwoQuestions(){
   } else {
     levelTwoCompleted();
   }
+  enabledAndBindEventListenerChoiceButtons();
 }
 
 /**
