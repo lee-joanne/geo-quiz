@@ -5,8 +5,8 @@ let questionArea = document.getElementById("question-area");
 let levelOneComplete = document.getElementById("level-one-complete");
 let levelTwoComplete = document.getElementById("level-two-complete");
 let levelThreeComplete = document.getElementById("level-three-complete");
-let nextLevel = document.getElementById("next-level");
-let gameOver = document.getElementById("game-over");
+let nextLevelButton = document.getElementById("next-level");
+let gameOverButton = document.getElementById("game-over");
 let scores = document.getElementById("scores");
 let playAgainButton = document.getElementById("play-again");
 let questionText = document.getElementById("question-text");
@@ -172,8 +172,7 @@ nums.splice(j,1);
 let x = 1;
 let currentQuestionIndex = ranNums[0];
 
-
-
+// Runs the game when start button is clicked
 startButton.addEventListener("click", runLevelOne);
 
 let currentQuestion = {};
@@ -185,7 +184,7 @@ let currentQuestion = {};
  */
 function runLevelOne(){
   showGameBoard();
-  showQuestion();
+  showLevelOneQuestions();
 };
 
 /**
@@ -197,7 +196,7 @@ function runLevelOne(){
 function runLevelTwo(){
   showGameBoard();
   showLevelTwoQuestions();
-  //create function to show game
+  nextLevelButton.classList.add('hide');
 }
 
 /**
@@ -212,47 +211,55 @@ function showGameBoard(){
   levelOneComplete.classList.add('hide');
   levelTwoComplete.classList.add('hide');
   levelThreeComplete.classList.add('hide');
-  gameOver.classList.add('hide');
+  gameOverButton.classList.add('hide');
 };
 
 /**
- * When user reaches 6 scores, levelOneComplete div will show to prompt the user to start level two
+ * Question area is hidden
+ * level one complete message and next level button will pop up
  */
 function levelOneCompleted(){
+  questionArea.classList.add('hide');
   levelOneComplete.classList.remove('hide');
-  nextLevel.addEventListener("click", runLevelTwo);
+  nextLevelButton.classList.remove('hide');
+  nextLevelButton.addEventListener("click", runLevelTwo);
 }
 
 /**
- * When user meets 12 scores, levelOneComplete div will show to prompt the user to start level three
+ * Question area is hidden
+ * level two complete message and next level button will pop up
  */
 function levelTwoCompleted(){
+  questionArea.classList.add('hide');
   levelTwoComplete.classList.remove('hide');
-  nextLevel.addEventListener("click", runLevelThree);
+  nextLevelButton.addEventListener("click", runLevelThree);
 }
 
 /**
- * The user has successfully completed the game and will show game complete div. There will be a button to prompt the user to play again
+ * Question area is hidden
+ * game complete message and play again button will pop up
  */
 function gameComplete(){
+  questionArea.classList.add('hide');
   levelThreeComplete.classList.remove('hide');
   playAgainButton.addEventListener("click", runLevelOne);
 }
 
 /**
- * When user fails to meet conditional scores, the play again div will show to allow the user to play again from level one
+ * Question area is hidden
+ * game over message and play again button will pop up
  */
 function playAgain(){
-  gameOver.classList.remove('hide');
+  questionArea.classList.add('hide');
+  gameOverButton.classList.remove('hide');
   playAgainButton.addEventListener("click", runLevelOne);
 }
 
 /**
- * The game will loop through the questions in the question array and the choices will iterate
- * through the multiple choice buttons. 
+ * The game will loop through level one questions in the question array and the choices will iterate
+ * through the multiple choice buttons
  */
-function showQuestion(){
-
+function showLevelOneQuestions(){
   if (x < 10) {
     nextQuestionSubmit.classList.add('hide');
     currentQuestion = levelOne[ currentQuestionIndex ];
@@ -261,17 +268,16 @@ function showQuestion(){
     for (let i = 0; i < choiceButtons.length; i++) {
       choiceButtons[i].textContent = currentQuestion.options[i];
       choiceButtons[i].setAttribute("data-type", currentQuestion.options[i]);
-      choiceButtons[i].addEventListener("click", checkAnswer);
-    }
-
-  }
-  else{
+      choiceButtons[i].addEventListener("click", checkAnswer);}
+    } else {
     levelOneCompleted();
-
   }
-
 }
 
+/**
+ * The game will loop through level two questions in the question array and the choices will iterate
+ * through the multiple choice buttons
+ */
 function showLevelTwoQuestions(){
   nextQuestionSubmit.classList.add('hide');
   currentQuestion = levelTwo[ currentQuestionIndex ];
@@ -298,7 +304,7 @@ function incrementScore(){
  * Depending on the answer, a certain alert message will show. 
  */
 function checkAnswer(e){
-  
+  choiceButtons[i].removeEventListener("click", checkAnswer);
   nextQuestionSubmit.classList.remove('hide');
   if (e.target.getAttribute('data-type') === currentQuestion.answer) {
     //alert("Good job! You got it right :)")
@@ -306,22 +312,20 @@ function checkAnswer(e){
   } else {
     //alert(`Sorry :( The answer was ${currentQuestion.answer}`);
   }
-  
-  Counter()
-  selectNextQuestion();
 
+  counter()
+  selectNextQuestion();
 }
 
-function Counter(){
+function counter(){
   currentQuestionIndex = ranNums[x];
   x = x + 1;
-
 }
 
 /**
  * Function created for the 'submit' button to appear and pull up the next question or completed div
  */
 function selectNextQuestion(){
-  nextQuestionSubmit.addEventListener("click", showQuestion);
+  nextQuestionSubmit.addEventListener("click", showLevelOneQuestions);
 }
 

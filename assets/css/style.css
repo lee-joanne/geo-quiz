@@ -140,7 +140,7 @@ button:hover {
     flex-wrap: wrap;
 }
 
-#question-text {
+#question-text, #level-one-complete {
     color: white;
     text-align: center;
     font-size: inherit;
@@ -148,12 +148,12 @@ button:hover {
     margin-bottom: 10%;
 }
 
-#next-question-submit {
+#next-question-submit, #next-level, #play-again {
     margin-top: 8%;
     background-color: #254153;
 }
 
-#next-question-submit:hover {
+#next-question-submit:hover, #next-level:hover, #play-again:hover {
     color: #254153;
     background-color: white;
 }
