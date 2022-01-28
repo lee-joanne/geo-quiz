@@ -304,7 +304,6 @@ function incrementScore(){
  * Depending on the answer, a certain alert message will show. 
  */
 function checkAnswer(e){
-  choiceButtons[i].removeEventListener("click", checkAnswer);
   nextQuestionSubmit.classList.remove('hide');
   if (e.target.getAttribute('data-type') === currentQuestion.answer) {
     //alert("Good job! You got it right :)")
@@ -312,7 +311,6 @@ function checkAnswer(e){
   } else {
     //alert(`Sorry :( The answer was ${currentQuestion.answer}`);
   }
-
   counter()
   selectNextQuestion();
 }
