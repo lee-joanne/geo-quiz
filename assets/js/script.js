@@ -254,6 +254,13 @@ function playAgain(){
   playAgainButton.addEventListener("click", runLevelOne);
 }
 
+function enabledAndBindEventListenerChoiceButtons(){
+  for (let i = 0; i < choiceButtons.length; i++) {
+    choiceButtons[i].enabled = true;
+    choiceButtons[i].addEventListener("click", checkAnswer);
+  }
+}
+
 /**
  * The game will loop through level one questions in the question array and the choices will iterate
  * through the multiple choice buttons
@@ -267,11 +274,11 @@ function showLevelOneQuestions(){
     for (let i = 0; i < choiceButtons.length; i++) {
       choiceButtons[i].textContent = currentQuestion.options[i];
       choiceButtons[i].setAttribute("data-type", currentQuestion.options[i]);
-      choiceButtons[i].addEventListener("click", checkAnswer);
     }
   } else {
     levelOneCompleted();
   }
+  enabledAndBindEventListenerChoiceButtons();
 }
 
 /**
@@ -287,7 +294,6 @@ function showLevelTwoQuestions(){
     for (let i = 0; i < choiceButtons.length; i++) {
       choiceButtons[i].textContent = currentQuestion.options[i];
       choiceButtons[i].setAttribute("data-type", currentQuestion.options[i]);
-      choiceButtons[i].addEventListener("click", checkAnswer);
     }
   } else {
     levelTwoCompleted();
@@ -313,6 +319,9 @@ function checkAnswer(e){
   } else {
     //alert(`Sorry :( The answer was ${currentQuestion.answer}`);
   }
+  for (let i = 0; i < choiceButtons.length; i++) {
+    choiceButtons[i].disabled = true;
+    }
   counter()
   selectNextQuestion();
   nextQuestionSubmit.classList.remove('hide');
@@ -329,9 +338,5 @@ function counter(){
 function selectNextQuestion(){
   nextQuestionSubmit.addEventListener("click", showLevelOneQuestions);
 }
-
-//for (let i = 0; i < choiceButtons.length; i++) {
- // choiceButtons[i].disabled = true;
-//}
 
 
