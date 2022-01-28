@@ -140,7 +140,7 @@ button:hover {
     flex-wrap: wrap;
 }
 
-#question-text, #level-one-complete {
+#question-text, #level-one-complete, #level-two-complete, #level-three-complete, #game-over {
     color: white;
     text-align: center;
     font-size: inherit;

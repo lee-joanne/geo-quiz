@@ -39,9 +39,9 @@ let levelOne = [
   },
 
   {
-    question: "How many provinces and territories are there in Canada?",
-    options: ["10 provinces 3 territories", "11 provinces 2 territories", "10 provinces 2 territories", "12 provinces 3 territories"],
-    answer: "10 provinces 3 territories",
+    question: "Which country is the famous archaeological site, Pompeii, in?",
+    options: ["Spain", "Croatia", "Italy", "Portugal"],
+    answer: "Italy",
   },
 
   {
@@ -63,9 +63,9 @@ let levelOne = [
   },
 
   {
-    question: "Which country has the most timezones?",
-    options: ["Russia", "France", "China", "Canada"],
-    answer: "France",
+    question: "Which continent is Mexico in?",
+    options: ["South America", "Central America", "North America", "Europe"],
+    answer: "North America",
   },
 
   {
@@ -102,9 +102,9 @@ let levelTwo = [
   },
 
   {
-    question: "Which country is the famous archaeological site, Pompeii, located?",
-    options: ["Spain, Croatia, Italy, Catalonia"],
-    answer: "Italy",
+    question: "Which country has the most timezones?",
+    options: ["Russia", "France", "China", "Canada"],
+    answer: "France",
   },
 
   {
@@ -120,9 +120,9 @@ let levelTwo = [
   },
 
   {
-    question: "Which continent is Mexico in?",
-    options: ["South America", "Central America", "North America", "Europe"],
-    answer: "North America",
+    question: "How many provinces and territories are there in Canada?",
+    options: ["10 provinces 3 territories", "11 provinces 2 territories", "10 provinces 2 territories", "12 provinces 3 territories"],
+    answer: "10 provinces 3 territories",
   },
 
   {
@@ -232,6 +232,7 @@ function levelOneCompleted(){
 function levelTwoCompleted(){
   questionArea.classList.add('hide');
   levelTwoComplete.classList.remove('hide');
+  nextLevelButton.classList.remove('hide');
   nextLevelButton.addEventListener("click", runLevelThree);
 }
 
@@ -260,7 +261,7 @@ function playAgain(){
  * through the multiple choice buttons
  */
 function showLevelOneQuestions(){
-  if (x < 10) {
+  if (x <= 10) {
     nextQuestionSubmit.classList.add('hide');
     currentQuestion = levelOne[ currentQuestionIndex ];
     questionText.textContent = currentQuestion.question;
@@ -268,9 +269,10 @@ function showLevelOneQuestions(){
     for (let i = 0; i < choiceButtons.length; i++) {
       choiceButtons[i].textContent = currentQuestion.options[i];
       choiceButtons[i].setAttribute("data-type", currentQuestion.options[i]);
-      choiceButtons[i].addEventListener("click", checkAnswer);}
-    } else {
-    levelOneCompleted();
+      choiceButtons[i].addEventListener("click", checkAnswer);
+    }
+  } else {
+    levelTwoCompleted();
   }
 }
 
@@ -279,16 +281,19 @@ function showLevelOneQuestions(){
  * through the multiple choice buttons
  */
 function showLevelTwoQuestions(){
-  nextQuestionSubmit.classList.add('hide');
-  currentQuestion = levelTwo[ currentQuestionIndex ];
-  questionText.textContent = currentQuestion.question;
+  if (x <= 10) {
+    nextQuestionSubmit.classList.add('hide');
+    currentQuestion = levelTwo[ currentQuestionIndex ];
+    questionText.textContent = currentQuestion.question;
   
-  for (let i = 0; i < choiceButtons.length; i++) {
-    choiceButtons[i].textContent = currentQuestion.options[i];
-    choiceButtons[i].setAttribute("data-type", currentQuestion.options[i]);
-    choiceButtons[i].addEventListener("click", checkAnswer);
+    for (let i = 0; i < choiceButtons.length; i++) {
+      choiceButtons[i].textContent = currentQuestion.options[i];
+      choiceButtons[i].setAttribute("data-type", currentQuestion.options[i]);
+      choiceButtons[i].addEventListener("click", checkAnswer);
+    }
+  } else {
+    levelTwoCompleted();
   }
-  
 }
 
 /**
