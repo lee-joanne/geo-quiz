@@ -126,7 +126,7 @@ button:hover {
 
 .game-container {
     padding-top: 50px;
-    height: 500px;
+    height: 475px;
     width: 50%;
     background: #5D748D;
     position: absolute;
@@ -149,8 +149,12 @@ button:hover {
 }
 
 #next-question-submit, #next-level, #play-again {
-    margin-top: 8%;
+    margin-top: 5%;
     background-color: #254153;
+}
+
+#feedback-text {
+    margin-bottom: 5%;
 }
 
 #next-question-submit:hover, #next-level:hover, #play-again:hover {
@@ -196,14 +200,18 @@ button, #question-text, .choice-btn {
 }
 
 .game-container {
-    height: 450px;
-    width: 75%;
+    height: 480px;
+    width: 65%;
 }
 
 .modal-content {
     width: 50%;
     height: 325px;
     margin: 20% auto;
+}
+
+#feedback-text {
+    margin: 2% 0 7%;
 }
 
 }
@@ -222,6 +230,14 @@ button {
     margin: 30% auto;
 }
 
+.game-container {
+    height: 415px;
+}
+
+#feedback-text {
+    margin-bottom: 8%;
+}
+
 .button-container {
     display: flex;
 }
@@ -232,9 +248,9 @@ button {
 
 }
 
-/* for media screens 550px wide and down */
+/* for media screens 624px wide and down */
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 624px) {
 
 body {
     font-size: 14px;
@@ -245,11 +261,15 @@ button, #question-text, .choice-btn {
 }
 
 .background {
-    height: 800px;
+    height: 850px;
 }
 
 .game-container {
-    height: 500px;
+    height: 530px;
+}
+
+#feedback-text {
+    margin-bottom: 8%;
 }
 
 #next-question {

@@ -11,6 +11,7 @@ let scores = document.getElementById("scores");
 let playAgainButton = document.getElementById("play-again");
 let questionText = document.getElementById("question-text");
 let nextQuestionSubmit = document.getElementById("next-question-submit");
+let feedbackText = document.getElementById("feedback-text");
 
 // Quiz questions for level one
 let levelOne = [
@@ -271,6 +272,7 @@ function enabledAndBindEventListenerChoiceButtons(){
 function showLevelOneQuestions(){
   if (x <= 10) {
     nextQuestionSubmit.classList.add('hide');
+    feedbackText.innerHTML = '';
     currentQuestion = levelOne[ currentQuestionIndex ];
     questionText.textContent = currentQuestion.question;
   
@@ -318,10 +320,10 @@ function incrementScore(){
  */
 function checkAnswer(e){
   if (e.target.getAttribute('data-type') === currentQuestion.answer) {
-    //alert("Good job! You got it right :)")
+    feedbackText.innerText = "Woohoo!"
     incrementScore();
   } else {
-    //alert(`Sorry :( The answer was ${currentQuestion.answer}`);
+    feedbackText.innerText = `Sorry! The answer was ${currentQuestion.answer}`;
   }
   for (let i = 0; i < choiceButtons.length; i++) {
     choiceButtons[i].disabled = true;
