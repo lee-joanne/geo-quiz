@@ -148,7 +148,7 @@ instructionsBtn.addEventListener("click", function(){
 })
 
 closeButton.addEventListener("click", function(){
-  modal.style.display = "none";oikm
+  modal.style.display = "none";
 })
 
 window.addEventListener("click", function(event) {
@@ -191,12 +191,10 @@ function runLevelOne(){
  * Initiates level two
  * Runs `showGameBoard()`
  * Runs `showLevelTwoQuestions()`
- * 
  */
 function runLevelTwo(){
   showGameBoard();
   showLevelTwoQuestions();
-  nextLevelButton.classList.add('hide');
 }
 
 /**
@@ -272,7 +270,7 @@ function showLevelOneQuestions(){
       choiceButtons[i].addEventListener("click", checkAnswer);
     }
   } else {
-    levelTwoCompleted();
+    levelOneCompleted();
   }
 }
 
@@ -309,7 +307,6 @@ function incrementScore(){
  * Depending on the answer, a certain alert message will show. 
  */
 function checkAnswer(e){
-  nextQuestionSubmit.classList.remove('hide');
   if (e.target.getAttribute('data-type') === currentQuestion.answer) {
     //alert("Good job! You got it right :)")
     incrementScore();
@@ -318,6 +315,7 @@ function checkAnswer(e){
   }
   counter()
   selectNextQuestion();
+  nextQuestionSubmit.classList.remove('hide');
 }
 
 function counter(){
@@ -331,4 +329,9 @@ function counter(){
 function selectNextQuestion(){
   nextQuestionSubmit.addEventListener("click", showLevelOneQuestions);
 }
+
+//for (let i = 0; i < choiceButtons.length; i++) {
+ // choiceButtons[i].disabled = true;
+//}
+
 
