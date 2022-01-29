@@ -102,9 +102,9 @@ let levelTwo = [{
   },
 
   {
-    question: "Which country has the most timezones?",
-    options: ["Russia", "France", "China", "Canada"],
-    answer: "France",
+    question: "Which city used to be called Constantinople?",
+    options: ["Budapest", "Rome", "Istanbul", "Florence"],
+    answer: "Istanbul",
   },
 
   {
@@ -136,6 +136,68 @@ let levelTwo = [{
     options: ["Ankara", "Istanbul", "Bursa", "Adana"],
     answer: "Ankara",
   },
+]
+
+// Quiz questions for level three
+let levelThree = [{
+  question: "Which country has the highest number of timezones?",
+  options: ["Russia", "France", "China", "Canada"],
+  answer: "France",
+},
+
+{
+  question: "Which countries make up the West Slavs?",
+  options: ["Poland, Czech Republic, Slovakia", "Russia, Belarus, Ukraine", "Poland, Bosnia, Croatia", "Slovakia, Slovenia, Austria"],
+  answer: "Poland, Czech Republic, Slovakia",
+},
+
+{
+  question: "How many states does Brazil have?",
+  options: ["28", "32", "34", "26"],
+  answer: "26",
+},
+
+{
+  question: "Which of these countries all have flags of the sun?",
+  options: ["Argentina, Macedonia, Nepal, India", "Argentina, Bangladesh, Rwanda, and Uruguay", "Argentina, Niger, Congo, Somalia", "Argentina, Japan, Macedonia, Kenya"],
+  answer: "Argentina, Bangladesh, Rwanda, and Uruguay",
+},
+
+{
+  question: "Which of these countries all fall on the Tropic of Cancer?",
+  options: ["Egypt, Bolivia, Panama", "Mali, Sudan, Indonesia", "Mexico, Algeria, Libya", "India, Angola, Bahamas"],
+  answer: "Mexico, Algeria, Libya",
+},
+
+{
+  question: "What is the capital city of Canada?",
+  options: ["Ottawa", "Toronto", "Vancouver", "Montréal"],
+  answer: "Ottawa",
+},
+
+{
+  question: "Which country is Mount Kilimanjaro located in?",
+  options: ["Kenya", "Somalia", "Uganda", "Tanzania"],
+  answer: "Tanzania",
+},
+
+{
+  question: "How many states does Australia have?",
+  options: ["6", "5", "7", "8"],
+  answer: "6",
+},
+
+{
+  question: "Which of these islands are both part of French Polynesia?",
+  options: ["Bora Bora and Sumatra", "Bali and Tasmania", "Tahiti and Manihi", "Timor and Bonacca"],
+  answer: "Tahiti and Manihi",
+},
+
+{
+  question: "Which country has the most islands?",
+  options: ["Canada", "Sweden", "Indonesia", "Greece"],
+  answer: "Sweden",
+},
 ]
 
 /* JavaScript code on modal window and close taken from W3 Schools page on modal windows: https://www.w3schools.com/howto/howto_css_modals.asp */
