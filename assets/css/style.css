@@ -48,6 +48,7 @@ button {
     display: block;
     margin: 0 auto;
     cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 button:hover {
@@ -130,6 +131,7 @@ button:hover {
     width: 50%;
     background: #5D748D;
     position: absolute;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
 .button-container {
@@ -151,6 +153,7 @@ button:hover {
 #next-button, #next-level, #play-again {
     margin-top: 5%;
     background-color: #254153;
+    border: none;
 }
 
 #feedback-text {
@@ -160,6 +163,7 @@ button:hover {
 #next-button:hover, #next-level:hover, #play-again:hover {
     color: #254153;
     background-color: white;
+    border: none;
 }
 
 .choice-btn {
