@@ -34,14 +34,14 @@ let levelOne = [{
   },
 
   {
-    question: "In which Ukranian city did the 1986 Chernobyl Disaster take place?",
-    options: ["Lviv", "Dnipro", "Bakhmut", "Pripyat"],
-    answer: "Pripyat",
+    question: "Which city used to be called Constantinople?",
+    options: ["Budapest", "Rome", "Istanbul", "Florence"],
+    answer: "Istanbul",
   },
 
   {
     question: "Which country is the famous archaeological site, Pompeii, in?",
-    options: ["Spain", "Croatia", "Italy", "Portugal"],
+    options: ["Spain", "Croatia", "Italy", "Greece"],
     answer: "Italy",
   },
 
@@ -52,15 +52,15 @@ let levelOne = [{
   },
 
   {
-    question: "Which of these countries is NOT part of the European Union?",
-    options: ["Malta", "Lithuania", "Romania", "Switzerland"],
-    answer: "Switzerland",
+    question: "What is the capital city of Canada?",
+    options: ["Ottawa", "Toronto", "Vancouver", "Montréal"],
+    answer: "Ottawa",
   },
 
   {
-    question: "Which country has the flag with the meaning 'circle of the sun'?",
-    options: ["Brazil", "South Korea", "Japan", "Laos"],
-    answer: "Japan",
+    question: "What is the smallest country in the world?",
+    options: ["Malta", "Vatican City", "Luxembourg", "Monaco"],
+    answer: "Vatican City",
   },
 
   {
@@ -70,17 +70,17 @@ let levelOne = [{
   },
 
   {
-    question: "Which city is right on the equator?",
-    options: ["Quito", "Cairo", "Kuala Lumpur", "Bangkok"],
-    answer: "Quito",
+    question: "What is the capital city of Brazil?",
+    options: ["Brasília", "Rio de Janeiro", "São Paulo", "Manaus"],
+    answer: "Brasília",
   },
 ]
 
 // Quiz questions for level two
 let levelTwo = [{
-    question: "What is the smallest country in the world?",
-    options: ["Malta", "Vatican City", "Luxembourg", "Monaco"],
-    answer: "Vatican City",
+  question: "Which country has the flag with the meaning 'circle of the sun'?",
+  options: ["Brazil", "South Korea", "Japan", "Laos"],
+  answer: "Japan",
   },
 
   {
@@ -102,9 +102,9 @@ let levelTwo = [{
   },
 
   {
-    question: "Which city used to be called Constantinople?",
-    options: ["Budapest", "Rome", "Istanbul", "Florence"],
-    answer: "Istanbul",
+    question: "In which Ukranian city did the 1986 Chernobyl Disaster take place?",
+    options: ["Lviv", "Dnipro", "Bakhmut", "Pripyat"],
+    answer: "Pripyat",
   },
 
   {
@@ -132,9 +132,9 @@ let levelTwo = [{
   },
 
   {
-    question: "What is the capital city of Turkey?",
-    options: ["Ankara", "Istanbul", "Bursa", "Adana"],
-    answer: "Ankara",
+    question: "Which city is right on the equator?",
+    options: ["Quito", "Cairo", "Kuala Lumpur", "Bangkok"],
+    answer: "Quito",
   },
 ]
 
@@ -170,9 +170,9 @@ let levelThree = [{
 },
 
 {
-  question: "What is the capital city of Canada?",
-  options: ["Ottawa", "Toronto", "Vancouver", "Montréal"],
-  answer: "Ottawa",
+  question: "Which of these countries is NOT part of the European Union?",
+  options: ["Malta", "Lithuania", "Romania", "Switzerland"],
+  answer: "Switzerland",
 },
 
 {
