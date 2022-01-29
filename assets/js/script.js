@@ -1,4 +1,5 @@
 // Global variables
+let homepageContainer = document.getElementById("homepage-container");
 let startButton = document.getElementById("start");
 let choiceButtons = document.getElementsByClassName("choice-btn");
 let questionArea = document.getElementById("question-area");
@@ -6,7 +7,7 @@ let levelOneComplete = document.getElementById("level-one-complete");
 let levelTwoComplete = document.getElementById("level-two-complete");
 let levelThreeComplete = document.getElementById("level-three-complete");
 let nextLevelButton = document.getElementById("next-level");
-let gameOverButton = document.getElementById("game-over");
+let gameOverMessage = document.getElementById("game-over");
 let scores = document.getElementById("scores");
 let playAgainButton = document.getElementById("play-again");
 let questionText = document.getElementById("question-text");
@@ -199,18 +200,35 @@ function runLevelTwo(){
 }
 
 /**
- * Hides HTML elements: homepage container, level one complete, level two complete, level three complete, game over
- * Adds HTML elements: question area, scores
+ * Restarts the game to the homepage
+ * Unhide HTML element: homepageContainer
+ * Hide rest of elements
+ */
+function showHomePage(){
+  homepageContainer.classList.remove('hide');
+  questionArea.classList.add('hide');
+  scores.classList.add('hide');
+  levelOneComplete.classList.add('hide');
+  levelTwoComplete.classList.add('hide');
+  levelThreeComplete.classList.add('hide');
+  gameOverMessage.classList.add('hide');
+  playAgainButton.classList.add('hide');
+}
+
+/**
+ * Initiates the game
+ * Unhide questionArea and score
+ * Hide rest of elements
  */
 function showGameBoard(){
-  let homepageContainer = document.getElementById("homepage-container");
   homepageContainer.classList.add('hide');
   questionArea.classList.remove('hide');
   scores.classList.remove('hide');
   levelOneComplete.classList.add('hide');
   levelTwoComplete.classList.add('hide');
   levelThreeComplete.classList.add('hide');
-  gameOverButton.classList.add('hide');
+  gameOverMessage.classList.add('hide');
+  playAgainButton.classList.add('hide');
 };
 
 /**
@@ -236,23 +254,33 @@ function levelTwoCompleted(){
 }
 
 /**
+ * EventListener function for play again button
+ * Runs `showHomePage()`
+ */
+function playAgainEventListener(){
+  playAgainButton.addEventListener("click", showHomePage);
+}
+
+/**
  * Question area is hidden
  * game complete message and play again button will pop up
  */
 function gameComplete(){
   questionArea.classList.add('hide');
   levelThreeComplete.classList.remove('hide');
-  playAgainButton.addEventListener("click", runLevelOne);
+  playAgainButton.classList.remove('hide');
+  playAgainEventListener();
 }
 
 /**
  * Question area is hidden
  * game over message and play again button will pop up
  */
-function playAgain(){
+function gameOver(){
   questionArea.classList.add('hide');
-  gameOverButton.classList.remove('hide');
-  playAgainButton.addEventListener("click", runLevelOne);
+  gameOverMessage.classList.remove('hide');
+  playAgainButton.classList.remove('hide');
+  playAgainEventListener();
 }
 
 /**
@@ -280,8 +308,11 @@ function showLevelOneQuestions(){
       choiceButtons[i].textContent = currentQuestion.options[i];
       choiceButtons[i].setAttribute("data-type", currentQuestion.options[i]);
     }
-  } else {
+  } if (document.getElementById("score") >= 6) {
     levelOneCompleted();
+  } 
+  else {
+    gameOver();
   }
   enabledAndBindEventListenerChoiceButtons();
 }
@@ -339,7 +370,7 @@ function counter(){
 }
 
 /**
- * Function created for the 'submit' button to appear and pull up the next question or completed div
+ * Function created for the 'next' button to appear and pull up the next question or completed div
  */
 function selectNextQuestion(){
   nextButton.addEventListener("click", showLevelOneQuestions);
