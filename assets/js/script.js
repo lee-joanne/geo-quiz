@@ -177,7 +177,6 @@ let currentQuestionIndex = ranNums[0];
 
 // Event listener to run `runLevelOne()`.
 startButton.addEventListener("click", runLevelOne);
-
 let currentQuestion = {};
 
 /**
@@ -201,22 +200,6 @@ function runLevelTwo(){
 }
 
 /**
- * Restarts the game to the homepage.
- * Unhide HTML element: homepageContainer.
- * Hide rest of elements.
- */
-function showHomePage(){
-  homepageContainer.classList.remove('hide');
-  questionArea.classList.add('hide');
-  scores.classList.add('hide');
-  levelOneComplete.classList.add('hide');
-  levelTwoComplete.classList.add('hide');
-  levelThreeComplete.classList.add('hide');
-  gameOverMessage.classList.add('hide');
-  playAgainButton.classList.add('hide');
-}
-
-/**
  * Initiates the game.
  * Unhide questionArea and score.
  * Hide rest of elements.
@@ -231,78 +214,6 @@ function showGameBoard(){
   gameOverMessage.classList.add('hide');
   playAgainButton.classList.add('hide');
 };
-
-/**
- * Question area is hidden.
- * Level one complete message and next level button will pop up.
- * Eventlistener runs `runLevelTwo()`.
- */
-function levelOneCompleted(){
-  questionArea.classList.add('hide');
-  levelOneComplete.classList.remove('hide');
-  nextLevelButton.classList.remove('hide');
-  nextLevelButton.addEventListener("click", runLevelTwo);
-}
-
-/**
- * Question area is hidden
- * Level two complete message and next level button will pop up
- * Eventlistener runs `runLevelThree()`.
- */
-function levelTwoCompleted(){
-  questionArea.classList.add('hide');
-  levelTwoComplete.classList.remove('hide');
-  nextLevelButton.classList.remove('hide');
-  nextLevelButton.addEventListener("click", runLevelThree);
-}
-
-/**
- * EventListener function for play again button.
- * Runs `showHomePage()`.
- */
-function playAgainEventListener(){
-  playAgainButton.addEventListener("click", showHomePage);
-}
-
-/**
- * Question area is hidden.
- * Game complete message and play again button will pop up.
- * Runs `playAgainEventListener()`.
- */
-function gameComplete(){
-  questionArea.classList.add('hide');
-  levelThreeComplete.classList.remove('hide');
-  playAgainButton.classList.remove('hide');
-  playAgainEventListener();
-}
-
-/**
- * Question area is hidden.
- * Game over message and play again button will pop up.
- * Runs `playAgainEventListener()`.
- */
-function gameOver(){
-  questionArea.classList.add('hide');
-  gameOverMessage.classList.remove('hide');
-  playAgainButton.classList.remove('hide');
-  playAgainEventListener();
-}
-
-function resetQuestionIndex(){
-  x = 1;
-  currentQuestionIndex = 0;
-}
-
-/**
- * Enable the choiceButtons to be clickable.
- * Runs `checkAnswer()`.
- */
-function enabledAndBindEventListenerChoiceButtons(){
-  for (let i = 0; i < choiceButtons.length; i++) {
-    choiceButtons[i].disabled = false;
-    choiceButtons[i].addEventListener("click", checkAnswer);
-  }
-}
 
 /**
  * Game will loop through level one questions in the question array and the choices will iterate
@@ -332,7 +243,6 @@ function showLevelOneQuestions(){
  */
 function showLevelTwoQuestions(){
   if (x <= 10) {
-    console.log(levelTwo)
     nextButton.classList.add('hide');
     currentQuestion = levelTwo[ currentQuestionIndex ];
     questionText.textContent = currentQuestion.question;
@@ -348,11 +258,14 @@ function showLevelTwoQuestions(){
 }
 
 /**
- * The score for the game will increment each time the user gets a correct answer.
+ * Enable the choiceButtons to be clickable.
+ * Runs `checkAnswer()`.
  */
-function incrementScore(){
-  let previousScore = parseInt(document.getElementById("score").innerText);
-  document.getElementById("score").innerText = ++previousScore;
+function enabledAndBindEventListenerChoiceButtons(){
+  for (let i = 0; i < choiceButtons.length; i++) {
+    choiceButtons[i].disabled = false;
+    choiceButtons[i].addEventListener("click", checkAnswer);
+  }
 }
 
 /**
@@ -362,7 +275,7 @@ function incrementScore(){
  */
 function checkAnswer(e){
   if (e.target.getAttribute('data-type') === currentQuestion.answer) {
-    feedbackText.innerText = "Woohoo!"
+    feedbackText.innerText = "Correct!"
     incrementScore();
   } else {
     feedbackText.innerText = `Sorry! The answer was ${currentQuestion.answer}`;
@@ -373,6 +286,14 @@ function checkAnswer(e){
   counter()
   selectNextQuestion();
   nextButton.classList.remove('hide');
+}
+
+/**
+ * The score for the game will increment each time the user gets a correct answer.
+ */
+function incrementScore(){
+  let previousScore = parseInt(document.getElementById("score").innerText);
+  document.getElementById("score").innerText = ++previousScore;
 }
 
 function counter(){
@@ -388,4 +309,82 @@ function selectNextQuestion(){
   nextButton.addEventListener("click", showLevelOneQuestions);
 }
 
+/**
+ * Question area is hidden.
+ * Level one complete message and next level button will pop up.
+ * Eventlistener runs `runLevelTwo()`.
+ */
+function levelOneCompleted(){
+  questionArea.classList.add('hide');
+  levelOneComplete.classList.remove('hide');
+  nextLevelButton.classList.remove('hide');
+  nextLevelButton.addEventListener("click", runLevelTwo);
+}
 
+/**
+ * Question area is hidden
+ * Level two complete message and next level button will pop up
+ * Eventlistener runs `runLevelThree()`.
+ */
+function levelTwoCompleted(){
+  questionArea.classList.add('hide');
+  levelTwoComplete.classList.remove('hide');
+  nextLevelButton.classList.remove('hide');
+  nextLevelButton.addEventListener("click", runLevelThree);
+}
+
+/**
+ * Resets question index when level is complete
+ */
+function resetQuestionIndex(){
+  x = 1;
+  currentQuestionIndex = 0;
+}
+
+/**
+ * Question area is hidden.
+ * Game complete message and play again button will pop up.
+ * Runs `playAgainEventListener()`.
+ */
+function gameComplete(){
+  questionArea.classList.add('hide');
+  levelThreeComplete.classList.remove('hide');
+  playAgainButton.classList.remove('hide');
+  playAgainEventListener();
+}
+
+/**
+ * Question area is hidden.
+ * Game over message and play again button will pop up.
+ * Runs `playAgainEventListener()`.
+ */
+function gameOver(){
+  questionArea.classList.add('hide');
+  gameOverMessage.classList.remove('hide');
+  playAgainButton.classList.remove('hide');
+  playAgainEventListener();
+}
+
+/**
+ * EventListener function for play again button.
+ * Runs `showHomePage()`.
+ */
+function playAgainEventListener(){
+  playAgainButton.addEventListener("click", showHomePage);
+}
+
+/**
+ * Restarts the game to the homepage.
+ * Unhide HTML element: homepageContainer.
+ * Hide rest of elements.
+ */
+function showHomePage(){
+  homepageContainer.classList.remove('hide');
+  questionArea.classList.add('hide');
+  scores.classList.add('hide');
+  levelOneComplete.classList.add('hide');
+  levelTwoComplete.classList.add('hide');
+  levelThreeComplete.classList.add('hide');
+  gameOverMessage.classList.add('hide');
+  playAgainButton.classList.add('hide');
+}
