@@ -343,24 +343,24 @@ function resetQuestionIndex(){
 
 /**
  * Question area is hidden.
- * Game complete message and play again button will pop up.
- * Runs `playAgainEventListener()`.
- */
-function gameComplete(){
-  questionArea.classList.add('hide');
-  levelThreeComplete.classList.remove('hide');
-  playAgainButton.classList.remove('hide');
-  playAgainEventListener();
-}
-
-/**
- * Question area is hidden.
  * Game over message and play again button will pop up.
  * Runs `playAgainEventListener()`.
  */
 function gameOver(){
   questionArea.classList.add('hide');
   gameOverMessage.classList.remove('hide');
+  playAgainButton.classList.remove('hide');
+  playAgainEventListener();
+}
+
+/**
+ * Question area is hidden.
+ * Game complete message and play again button will pop up.
+ * Runs `playAgainEventListener()`.
+ */
+function gameComplete(){
+  questionArea.classList.add('hide');
+  levelThreeComplete.classList.remove('hide');
   playAgainButton.classList.remove('hide');
   playAgainEventListener();
 }

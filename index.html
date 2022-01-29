@@ -25,7 +25,7 @@
 
         <!-- header and logo -->
         <header>
-            <a href="index.html" aria-label="Go to homepage of Geo Quiz">
+            <a href="index.html" aria-label="This will go to homepage of Geo Quiz">
                 <h1 class="game-logo"><i class="fas fa-globe-americas"></i> Geo Quiz</h1>
             </a>
         </header>
@@ -39,7 +39,7 @@
                     <h2>Welcome to Geo Quiz!</h2>
                     <br>
                     <h3>Test your geography knowledge with our three level quiz</h3>
-                    <button id="instructions" aria-label="Instructions on how to play the game" type="button"><i class="far fa-question-circle"></i> How To Play</button>
+                    <button id="instructions" aria-label="This button will go to the instructions on how to play the game (opens in a modal window)" type="button"><i class="far fa-question-circle"></i> How To Play</button>
 
                     <!-- HTML code for modal mostly taken from W3 Schools page on modal windows: https://www.w3schools.com/howto/howto_css_modals.asp -->
                     <div id="instructions-modal" class="modal">
@@ -63,7 +63,7 @@
                         </div>
                     </div>
                     <br>
-                    <button id="start" aria-label="Start the game" type="button"><i class="fas fa-gamepad"></i> Let's Play!</button>
+                    <button id="start" aria-label="This button will start the game" type="button"><i class="fas fa-gamepad"></i> Let's Play!</button>
                 </div>
 
                 <p id="scores" class="hide">Score: <span id="score">0</span></p>
@@ -72,14 +72,14 @@
                 <div id="question-area" class="hide"> 
                     <div id="question-text"></div>
                     <div class="button-container">
-                        <button class="choice-btn" data-type="a"></button>
-                        <button class="choice-btn" data-type="b"></button>
-                        <button class="choice-btn" data-type="c"></button>
-                        <button class="choice-btn" data-type="d"></button>
+                        <button class="choice-btn" data-type="a" aria-label="option A button"></button>
+                        <button class="choice-btn" data-type="b" aria-label="option B button"></button>
+                        <button class="choice-btn" data-type="c" aria-label="option C button"></button>
+                        <button class="choice-btn" data-type="d" aria-label="option D button"></button>
                     </div>
                     <br>
                     <p id="feedback-text"></p>
-                    <button id="next-button" class="hide" data-type="submit">Next</button>
+                    <button id="next-button" class="hide" aria-label="This button will go to the next question or message of the quiz" data-type="submit">Next</button>
                 </div>
 
                 <!-- level complete messages: appear when user meets certain conditions -->
@@ -116,8 +116,8 @@
                     </div>
                 </div>
 
-                <button id="next-level" class="hide" data-type="submit">Let's Go!</button>
-                <button id="play-again" class="hide" data-type="submit">Play again!</button>
+                <button id="next-level" aria-label="This button will go to the next level" class="hide" data-type="submit">Let's Go!</button>
+                <button id="play-again" aria-label="This button will go to the main homepage of the game" class="hide" data-type="submit">Play again!</button>
             </div>
         </section>
     </div>
