@@ -160,9 +160,9 @@ window.addEventListener("click", function(event) {
 })
 
 // This code on creating random numbers for the quiz to shuffle is mostly taken from Stack Overflow: https://stackoverflow.com/questions/18806210/generating-non-repeating-random-numbers-in-js
-var nums = [0,1,2,3,4,5,6,7,8,9],
-ranNums = [],
-i = nums.length,
+var nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+ranNums = [];
+i = nums.length;
 j = 0;
 
 while (i--) {
@@ -174,15 +174,16 @@ nums.splice(j,1);
 let x = 1;
 let currentQuestionIndex = ranNums[0];
 
-// Runs the game when start button is clicked
+
+// Event listener to run `runLevelOne()`.
 startButton.addEventListener("click", runLevelOne);
 
 let currentQuestion = {};
 
 /**
- * Initiates level one
- * Runs `showGameBoard()`
- * Runs `showQuestion()`
+ * Initiates level one.
+ * Runs `showGameBoard()`.
+ * Runs `showQuestion()`.
  */
 function runLevelOne(){
   showGameBoard();
@@ -190,9 +191,9 @@ function runLevelOne(){
 };
 
 /**
- * Initiates level two
- * Runs `showGameBoard()`
- * Runs `showLevelTwoQuestions()`
+ * Initiates level two.
+ * Runs `showGameBoard()`.
+ * Runs `showLevelTwoQuestions()`.
  */
 function runLevelTwo(){
   showGameBoard();
@@ -200,9 +201,9 @@ function runLevelTwo(){
 }
 
 /**
- * Restarts the game to the homepage
- * Unhide HTML element: homepageContainer
- * Hide rest of elements
+ * Restarts the game to the homepage.
+ * Unhide HTML element: homepageContainer.
+ * Hide rest of elements.
  */
 function showHomePage(){
   homepageContainer.classList.remove('hide');
@@ -216,9 +217,9 @@ function showHomePage(){
 }
 
 /**
- * Initiates the game
- * Unhide questionArea and score
- * Hide rest of elements
+ * Initiates the game.
+ * Unhide questionArea and score.
+ * Hide rest of elements.
  */
 function showGameBoard(){
   homepageContainer.classList.add('hide');
@@ -232,8 +233,9 @@ function showGameBoard(){
 };
 
 /**
- * Question area is hidden
- * level one complete message and next level button will pop up
+ * Question area is hidden.
+ * Level one complete message and next level button will pop up.
+ * Eventlistener runs `runLevelTwo()`.
  */
 function levelOneCompleted(){
   questionArea.classList.add('hide');
@@ -244,7 +246,8 @@ function levelOneCompleted(){
 
 /**
  * Question area is hidden
- * level two complete message and next level button will pop up
+ * Level two complete message and next level button will pop up
+ * Eventlistener runs `runLevelThree()`.
  */
 function levelTwoCompleted(){
   questionArea.classList.add('hide');
@@ -254,16 +257,17 @@ function levelTwoCompleted(){
 }
 
 /**
- * EventListener function for play again button
- * Runs `showHomePage()`
+ * EventListener function for play again button.
+ * Runs `showHomePage()`.
  */
 function playAgainEventListener(){
   playAgainButton.addEventListener("click", showHomePage);
 }
 
 /**
- * Question area is hidden
- * game complete message and play again button will pop up
+ * Question area is hidden.
+ * Game complete message and play again button will pop up.
+ * Runs `playAgainEventListener()`.
  */
 function gameComplete(){
   questionArea.classList.add('hide');
@@ -273,8 +277,9 @@ function gameComplete(){
 }
 
 /**
- * Question area is hidden
- * game over message and play again button will pop up
+ * Question area is hidden.
+ * Game over message and play again button will pop up.
+ * Runs `playAgainEventListener()`.
  */
 function gameOver(){
   questionArea.classList.add('hide');
@@ -283,8 +288,14 @@ function gameOver(){
   playAgainEventListener();
 }
 
+function resetQuestionIndex(){
+  x = 1;
+  currentQuestionIndex = 0;
+}
+
 /**
- * Enable the choiceButtons
+ * Enable the choiceButtons to be clickable.
+ * Runs `checkAnswer()`.
  */
 function enabledAndBindEventListenerChoiceButtons(){
   for (let i = 0; i < choiceButtons.length; i++) {
@@ -294,8 +305,8 @@ function enabledAndBindEventListenerChoiceButtons(){
 }
 
 /**
- * The game will loop through level one questions in the question array and the choices will iterate
- * through the multiple choice buttons
+ * Game will loop through level one questions in the question array and the choices will iterate
+ * through the multiple choice buttons.
  */
 function showLevelOneQuestions(){
   if (x <= 10) {
@@ -308,11 +319,9 @@ function showLevelOneQuestions(){
       choiceButtons[i].textContent = currentQuestion.options[i];
       choiceButtons[i].setAttribute("data-type", currentQuestion.options[i]);
     }
-  } if (document.getElementById("score") >= 6) {
+  } else {
     levelOneCompleted();
-  } 
-  else {
-    gameOver();
+    resetQuestionIndex();
   }
   enabledAndBindEventListenerChoiceButtons();
 }
@@ -323,6 +332,7 @@ function showLevelOneQuestions(){
  */
 function showLevelTwoQuestions(){
   if (x <= 10) {
+    console.log(levelTwo)
     nextButton.classList.add('hide');
     currentQuestion = levelTwo[ currentQuestionIndex ];
     questionText.textContent = currentQuestion.question;
@@ -338,7 +348,7 @@ function showLevelTwoQuestions(){
 }
 
 /**
- * The score for the game will increment each time the user gets a correct answer
+ * The score for the game will increment each time the user gets a correct answer.
  */
 function incrementScore(){
   let previousScore = parseInt(document.getElementById("score").innerText);
@@ -347,7 +357,8 @@ function incrementScore(){
 
 /**
  * The user's input will be checked whether they have selected the correct or incorrect answer.
- * Depending on the answer, a certain alert message will show. 
+ * Correct answer shows encouraging feedback message.
+ * Incorrect answer shows feedback message containing correct answer.
  */
 function checkAnswer(e){
   if (e.target.getAttribute('data-type') === currentQuestion.answer) {
@@ -370,7 +381,8 @@ function counter(){
 }
 
 /**
- * Function created for the 'next' button to appear and pull up the next question or completed div
+ * Function of EventListener of next button.
+ * Runs `showLevelOneQuestions()`.
  */
 function selectNextQuestion(){
   nextButton.addEventListener("click", showLevelOneQuestions);

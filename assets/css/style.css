@@ -126,7 +126,7 @@ button:hover {
 
 .game-container {
     padding-top: 50px;
-    height: 475px;
+    height: 500px;
     width: 50%;
     background: #5D748D;
     position: absolute;
@@ -265,7 +265,7 @@ button, #question-text, .choice-btn {
 }
 
 .game-container {
-    height: 530px;
+    height: 540px;
 }
 
 #feedback-text {
