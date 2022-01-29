@@ -148,7 +148,7 @@ button:hover {
     margin-bottom: 10%;
 }
 
-#next-question-submit, #next-level, #play-again {
+#next-button, #next-level, #play-again {
     margin-top: 5%;
     background-color: #254153;
 }
@@ -157,7 +157,7 @@ button:hover {
     margin-bottom: 5%;
 }
 
-#next-question-submit:hover, #next-level:hover, #play-again:hover {
+#next-button:hover, #next-level:hover, #play-again:hover {
     color: #254153;
     background-color: white;
 }

@@ -10,7 +10,7 @@ let gameOverButton = document.getElementById("game-over");
 let scores = document.getElementById("scores");
 let playAgainButton = document.getElementById("play-again");
 let questionText = document.getElementById("question-text");
-let nextQuestionSubmit = document.getElementById("next-question-submit");
+let nextButton = document.getElementById("next-button");
 let feedbackText = document.getElementById("feedback-text");
 
 // Quiz questions for level one
@@ -271,7 +271,7 @@ function enabledAndBindEventListenerChoiceButtons(){
  */
 function showLevelOneQuestions(){
   if (x <= 10) {
-    nextQuestionSubmit.classList.add('hide');
+    nextButton.classList.add('hide');
     feedbackText.innerHTML = '';
     currentQuestion = levelOne[ currentQuestionIndex ];
     questionText.textContent = currentQuestion.question;
@@ -292,7 +292,7 @@ function showLevelOneQuestions(){
  */
 function showLevelTwoQuestions(){
   if (x <= 10) {
-    nextQuestionSubmit.classList.add('hide');
+    nextButton.classList.add('hide');
     currentQuestion = levelTwo[ currentQuestionIndex ];
     questionText.textContent = currentQuestion.question;
   
@@ -330,7 +330,7 @@ function checkAnswer(e){
     }
   counter()
   selectNextQuestion();
-  nextQuestionSubmit.classList.remove('hide');
+  nextButton.classList.remove('hide');
 }
 
 function counter(){
@@ -342,7 +342,7 @@ function counter(){
  * Function created for the 'submit' button to appear and pull up the next question or completed div
  */
 function selectNextQuestion(){
-  nextQuestionSubmit.addEventListener("click", showLevelOneQuestions);
+  nextButton.addEventListener("click", showLevelOneQuestions);
 }
 
 
