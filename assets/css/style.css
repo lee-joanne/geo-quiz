@@ -17,12 +17,14 @@ body {
     font-size: 20px;
 }
 
-header > a {
+header>a {
     text-decoration: none;
     text-align: center;
 }
 
-h2, h3, p {
+h2,
+h3,
+p {
     color: white;
     text-align: center;
 }
@@ -38,7 +40,7 @@ ul {
 }
 
 button {
-    color:white;
+    color: white;
     font-family: inherit;
     background-color: #5D748D;
     border: 1px solid;
@@ -81,7 +83,7 @@ button:hover {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.9);
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
 .modal-content {
@@ -144,7 +146,11 @@ button:hover {
     flex-wrap: wrap;
 }
 
-#question-text, #level-one-complete, #level-two-complete, #level-three-complete, #game-over {
+#question-text,
+#level-one-complete,
+#level-two-complete,
+#level-three-complete,
+#game-over {
     color: white;
     text-align: center;
     font-size: inherit;
@@ -152,7 +158,9 @@ button:hover {
     margin-bottom: 10%;
 }
 
-#next-button, #next-level, #play-again {
+#next-button,
+#next-level,
+#play-again {
     margin-top: 5%;
     background-color: #254153;
     border: none;
@@ -162,7 +170,9 @@ button:hover {
     margin-bottom: 5%;
 }
 
-#next-button:hover, #next-level:hover, #play-again:hover {
+#next-button:hover,
+#next-level:hover,
+#play-again:hover {
     color: #254153;
     background-color: white;
     border: none;
@@ -197,28 +207,30 @@ button:hover {
 
 @media screen and (max-width: 950px) {
 
-body {
-    font-size: 16px;
-}
+    body {
+        font-size: 16px;
+    }
 
-button, #question-text, .choice-btn {
-    font-size: inherit;
-}
+    button,
+    #question-text,
+    .choice-btn {
+        font-size: inherit;
+    }
 
-.game-container {
-    height: 480px;
-    width: 65%;
-}
+    .game-container {
+        height: 480px;
+        width: 65%;
+    }
 
-.modal-content {
-    width: 50%;
-    height: 325px;
-    margin: 20% auto;
-}
+    .modal-content {
+        width: 50%;
+        height: 325px;
+        margin: 20% auto;
+    }
 
-#feedback-text {
-    margin: 2% 0 7%;
-}
+    #feedback-text {
+        margin: 2% 0 7%;
+    }
 
 }
 
@@ -226,31 +238,31 @@ button, #question-text, .choice-btn {
 
 @media screen and (max-width: 705px) {
 
-button {
-    width: 200px;
-    height: 50px;
-}
-    
-.modal-content {
-    height: 350px;
-    margin: 30% auto;
-}
+    button {
+        width: 200px;
+        height: 50px;
+    }
 
-.game-container {
-    height: 415px;
-}
+    .modal-content {
+        height: 350px;
+        margin: 30% auto;
+    }
 
-#feedback-text {
-    margin-bottom: 8%;
-}
+    .game-container {
+        height: 415px;
+    }
 
-.button-container {
-    display: flex;
-}
+    #feedback-text {
+        margin-bottom: 8%;
+    }
 
-.footer-socialmedia i {
-    padding: 6% 15%;
-}
+    .button-container {
+        display: flex;
+    }
+
+    .footer-socialmedia i {
+        padding: 6% 15%;
+    }
 
 }
 
@@ -258,28 +270,30 @@ button {
 
 @media screen and (max-width: 624px) {
 
-body {
-    font-size: 14px;
-}
+    body {
+        font-size: 14px;
+    }
 
-button, #question-text, .choice-btn {
-    font-size: inherit;
-}
+    button,
+    #question-text,
+    .choice-btn {
+        font-size: inherit;
+    }
 
-.background {
-    height: 850px;
-}
+    .background {
+        height: 850px;
+    }
 
-.game-container {
-    height: 540px;
-}
+    .game-container {
+        height: 540px;
+    }
 
-#feedback-text {
-    margin-bottom: 8%;
-}
+    #feedback-text {
+        margin-bottom: 8%;
+    }
 
-#next-question {
-    width: 150px;
-}
+    #next-question {
+        width: 150px;
+    }
 
 }

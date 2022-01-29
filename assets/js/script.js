@@ -15,8 +15,7 @@ let nextButton = document.getElementById("next-button");
 let feedbackText = document.getElementById("feedback-text");
 
 // Quiz questions for level one
-let levelOne = [
-  { 
+let levelOne = [{
     question: "What is the capital city of Germany?",
     options: ["Berlin", "Hamburg", "Munich", "Frankfurt"],
     answer: "Berlin",
@@ -28,7 +27,7 @@ let levelOne = [
     answer: "Australia",
   },
 
-  { 
+  {
     question: "Which country has the Eiffel Tower?",
     options: ["Germany", "France", "Portugal", "United Kingdom"],
     answer: "France",
@@ -78,8 +77,7 @@ let levelOne = [
 ]
 
 // Quiz questions for level two
-let levelTwo = [
-  { 
+let levelTwo = [{
     question: "What is the smallest country in the world?",
     options: ["Malta", "Vatican City", "Luxembourg", "Monaco"],
     answer: "Vatican City",
@@ -91,7 +89,7 @@ let levelTwo = [
     answer: "Nothing",
   },
 
-  { 
+  {
     question: "What are the official languages of Switzerland?",
     options: ["German, French, English, Italian", "German and Italian", "German, French, Italian, Dutch", "German, French, Italian, Romansh"],
     answer: "German, French, Italian, Romansh",
@@ -145,15 +143,15 @@ let modal = document.getElementById("instructions-modal");
 let instructionsBtn = document.getElementById("instructions");
 let closeButton = document.getElementsByClassName("close")[0];
 
-instructionsBtn.addEventListener("click", function(){
+instructionsBtn.addEventListener("click", function () {
   modal.style.display = "block";
 })
 
-closeButton.addEventListener("click", function(){
+closeButton.addEventListener("click", function () {
   modal.style.display = "none";
 })
 
-window.addEventListener("click", function(event) {
+window.addEventListener("click", function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
@@ -166,9 +164,9 @@ i = nums.length;
 j = 0;
 
 while (i--) {
-j = Math.floor(Math.random() * (i+1));
-ranNums.push(nums[j]);
-nums.splice(j,1);
+  j = Math.floor(Math.random() * (i + 1));
+  ranNums.push(nums[j]);
+  nums.splice(j, 1);
 }
 
 let x = 1;
@@ -184,17 +182,17 @@ let currentQuestion = {};
  * Runs `showGameBoard()`.
  * Runs `showQuestion()`.
  */
-function runLevelOne(){
+function runLevelOne() {
   showGameBoard();
   showLevelOneQuestions();
-};
+}
 
 /**
  * Initiates level two.
  * Runs `showGameBoard()`.
  * Runs `showLevelTwoQuestions()`.
  */
-function runLevelTwo(){
+function runLevelTwo() {
   showGameBoard();
   showLevelTwoQuestions();
 }
@@ -204,7 +202,7 @@ function runLevelTwo(){
  * Unhide questionArea and score.
  * Hide rest of elements.
  */
-function showGameBoard(){
+function showGameBoard() {
   homepageContainer.classList.add('hide');
   questionArea.classList.remove('hide');
   scores.classList.remove('hide');
@@ -219,13 +217,13 @@ function showGameBoard(){
  * Game will loop through level one questions in the question array and the choices will iterate
  * through the multiple choice buttons.
  */
-function showLevelOneQuestions(){
+function showLevelOneQuestions() {
   if (x <= 10) {
     nextButton.classList.add('hide');
     feedbackText.innerHTML = '';
-    currentQuestion = levelOne[ currentQuestionIndex ];
+    currentQuestion = levelOne[currentQuestionIndex];
     questionText.textContent = currentQuestion.question;
-  
+
     for (let i = 0; i < choiceButtons.length; i++) {
       choiceButtons[i].textContent = currentQuestion.options[i];
       choiceButtons[i].setAttribute("data-type", currentQuestion.options[i]);
@@ -241,12 +239,12 @@ function showLevelOneQuestions(){
  * The game will loop through level two questions in the question array and the choices will iterate
  * through the multiple choice buttons
  */
-function showLevelTwoQuestions(){
+function showLevelTwoQuestions() {
   if (x <= 10) {
     nextButton.classList.add('hide');
-    currentQuestion = levelTwo[ currentQuestionIndex ];
+    currentQuestion = levelTwo[currentQuestionIndex];
     questionText.textContent = currentQuestion.question;
-  
+
     for (let i = 0; i < choiceButtons.length; i++) {
       choiceButtons[i].textContent = currentQuestion.options[i];
       choiceButtons[i].setAttribute("data-type", currentQuestion.options[i]);
@@ -261,7 +259,7 @@ function showLevelTwoQuestions(){
  * Enable the choiceButtons to be clickable.
  * Runs `checkAnswer()`.
  */
-function enabledAndBindEventListenerChoiceButtons(){
+function enabledAndBindEventListenerChoiceButtons() {
   for (let i = 0; i < choiceButtons.length; i++) {
     choiceButtons[i].disabled = false;
     choiceButtons[i].addEventListener("click", checkAnswer);
@@ -273,7 +271,7 @@ function enabledAndBindEventListenerChoiceButtons(){
  * Correct answer shows encouraging feedback message.
  * Incorrect answer shows feedback message containing correct answer.
  */
-function checkAnswer(e){
+function checkAnswer(e) {
   if (e.target.getAttribute('data-type') === currentQuestion.answer) {
     feedbackText.innerText = "Correct!"
     incrementScore();
@@ -282,7 +280,7 @@ function checkAnswer(e){
   }
   for (let i = 0; i < choiceButtons.length; i++) {
     choiceButtons[i].disabled = true;
-    }
+  }
   counter()
   selectNextQuestion();
   nextButton.classList.remove('hide');
@@ -291,12 +289,12 @@ function checkAnswer(e){
 /**
  * The score for the game will increment each time the user gets a correct answer.
  */
-function incrementScore(){
+function incrementScore() {
   let previousScore = parseInt(document.getElementById("score").innerText);
   document.getElementById("score").innerText = ++previousScore;
 }
 
-function counter(){
+function counter() {
   currentQuestionIndex = ranNums[x];
   x = x + 1;
 }
@@ -305,7 +303,7 @@ function counter(){
  * Function of EventListener of next button.
  * Runs `showLevelOneQuestions()`.
  */
-function selectNextQuestion(){
+function selectNextQuestion() {
   nextButton.addEventListener("click", showLevelOneQuestions);
 }
 
@@ -314,7 +312,7 @@ function selectNextQuestion(){
  * Level one complete message and next level button will pop up.
  * Eventlistener runs `runLevelTwo()`.
  */
-function levelOneCompleted(){
+function levelOneCompleted() {
   questionArea.classList.add('hide');
   levelOneComplete.classList.remove('hide');
   nextLevelButton.classList.remove('hide');
@@ -326,7 +324,7 @@ function levelOneCompleted(){
  * Level two complete message and next level button will pop up
  * Eventlistener runs `runLevelThree()`.
  */
-function levelTwoCompleted(){
+function levelTwoCompleted() {
   questionArea.classList.add('hide');
   levelTwoComplete.classList.remove('hide');
   nextLevelButton.classList.remove('hide');
@@ -336,7 +334,7 @@ function levelTwoCompleted(){
 /**
  * Resets question index when level is complete
  */
-function resetQuestionIndex(){
+function resetQuestionIndex() {
   x = 1;
   currentQuestionIndex = 0;
 }
@@ -346,7 +344,7 @@ function resetQuestionIndex(){
  * Game over message and play again button will pop up.
  * Runs `playAgainEventListener()`.
  */
-function gameOver(){
+function gameOver() {
   questionArea.classList.add('hide');
   gameOverMessage.classList.remove('hide');
   playAgainButton.classList.remove('hide');
@@ -358,7 +356,7 @@ function gameOver(){
  * Game complete message and play again button will pop up.
  * Runs `playAgainEventListener()`.
  */
-function gameComplete(){
+function gameComplete() {
   questionArea.classList.add('hide');
   levelThreeComplete.classList.remove('hide');
   playAgainButton.classList.remove('hide');
@@ -369,7 +367,7 @@ function gameComplete(){
  * EventListener function for play again button.
  * Runs `showHomePage()`.
  */
-function playAgainEventListener(){
+function playAgainEventListener() {
   playAgainButton.addEventListener("click", showHomePage);
 }
 
@@ -378,7 +376,7 @@ function playAgainEventListener(){
  * Unhide HTML element: homepageContainer.
  * Hide rest of elements.
  */
-function showHomePage(){
+function showHomePage() {
   homepageContainer.classList.remove('hide');
   questionArea.classList.add('hide');
   scores.classList.add('hide');
