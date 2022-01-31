@@ -69,7 +69,7 @@ button:hover {
 .background {
     overflow: hidden;
     background: url(../images/game-background.jpeg) no-repeat center / cover;
-    height: 950px;
+    height: 900px;
     width: 100%;
 }
 
@@ -207,6 +207,15 @@ button:hover {
     color: #5D748D;
 }
 
+/* for media screens 1500px wide and up */
+
+@media screen and (min-width: 1500px) {
+
+    .game-container {
+        width: 40%;
+    }
+}
+
 /* for media screens 950px wide and down */
 
 @media screen and (max-width: 950px) {
@@ -247,13 +256,26 @@ button:hover {
         height: 50px;
     }
 
+    .background {
+        height: 715px;
+    }
+
+    .game-section {
+        top: 15px;
+    }
+
+    .game-logo {
+        margin-bottom: 0;
+    }
+
     .modal-content {
         height: 350px;
         margin: 30% auto;
     }
 
     .game-container {
-        height: 415px;
+        height: 400px;
+        width: 80%;
     }
 
     #feedback-text {
@@ -284,10 +306,6 @@ button:hover {
         font-size: inherit;
     }
 
-    .background {
-        height: 850px;
-    }
-
     .game-container {
         height: 540px;
     }
@@ -300,4 +318,14 @@ button:hover {
         width: 150px;
     }
     
+}
+
+/* for media screens 300px wide and down */
+
+@media screen and (max-width: 300px) {
+
+    .modal-content {
+        height: 400px;
+    }
+
 }
