@@ -419,8 +419,6 @@ function gameComplete() {
  */
 function playAgainEventListener() {
   playAgainButton.addEventListener("click", showHomePage);
-  let score = document.getElementById("score");
-  score = 0;
 }
 
 /**
