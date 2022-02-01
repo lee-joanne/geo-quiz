@@ -219,10 +219,10 @@ window.addEventListener("click", function (event) {
   }
 })
 
-// This code on creating random numbers for the quiz to shuffle is mostly taken from Stack Overflow: https://stackoverflow.com/questions/18806210/generating-non-repeating-random-numbers-in-js
-var nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+// This code on creating random numbers for the quiz to shuffle is mostly taken from Stack Overflow: https://stackoverflow.com/questions/18806210generating-non-repeating-random-numbers-in-js
+let nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 ranNums = [];
-i = nums.length;
+i = levelOne.length;
 j = 0;
 
 while (i--) {
@@ -231,8 +231,9 @@ while (i--) {
   nums.splice(j, 1);
 }
 
-let x = 1;
+
 let currentQuestionIndex = ranNums[0];
+let x = 1;
 
 // Event listener to run `runLevel()`.
 startButton.addEventListener("click", runLevel);
@@ -341,9 +342,12 @@ function incrementScore() {
   document.getElementById("score").innerText = ++previousScore;
 }
 
+/**
+ * Increments current question index
+ */
 function counter() {
   currentQuestionIndex = ranNums[x];
-  x = x + 1;
+  x += 1;
 }
 
 /**
@@ -383,7 +387,7 @@ function levelCompleted() {
  */
 function resetQuestionIndex() {
   x = 1;
-  currentQuestionIndex = 0;
+  currentQuestionIndex = ranNums[0];
 }
 
 /**

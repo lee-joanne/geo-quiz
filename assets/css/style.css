@@ -372,3 +372,15 @@ footer {
 
 }
 
+/* for media screens 280px wide and down */
+
+@media screen and (max-width: 280px) {
+
+    .footer-socialmedia i {
+        font-size: 150%;
+        padding: 5% 15%;
+
+    }
+
+}
+
