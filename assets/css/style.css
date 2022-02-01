@@ -324,6 +324,7 @@ footer {
     
 }
 
+
 /* for media screens 380px wide and down */
 
 @media screen and (max-width: 380px) {
@@ -341,18 +342,33 @@ footer {
 
 }
 
-/* for media screens 600px high and down */
+/* for media screens 320px wide and down */
 
-@media screen and (max-height: 600px) {
-    
+@media screen and (max-width: 320px) {
+
     button {
-        width: 225px;
+        height: 30px;
     }
-    
+
+    body {
+        font-size: 10px;
+    }
+
     .game-container {
-        width: 90%;
-        height: 450px;
-        padding-top: 10px;
+        height: 380px;
     }
-    
+
+    button,
+    #question-text,
+    .choice-btn {
+        font-size: inherit;
+    }
+
+    .footer-socialmedia i {
+        font-size: 100%;
+        padding: 0.5% 15%;
+
+    }
+
 }
+
