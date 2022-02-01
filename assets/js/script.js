@@ -419,24 +419,8 @@ function gameComplete() {
 
 /**
  * EventListener function for play again button.
- * Runs `showHomePage()`.
+ * Refreshes the page to restart score and shuffle
  */
 function playAgainEventListener() {
-  playAgainButton.addEventListener("click", showHomePage);
-}
-
-/**
- * Restarts the game to the homepage.
- * Unhide HTML element: homepageContainer.
- * Hide rest of elements.
- */
-function showHomePage() {
-  homepageContainer.classList.remove('hide');
-  questionArea.classList.add('hide');
-  scores.classList.add('hide');
-  levelOneComplete.classList.add('hide');
-  levelTwoComplete.classList.add('hide');
-  levelThreeComplete.classList.add('hide');
-  gameOverMessage.classList.add('hide');
-  playAgainButton.classList.add('hide');
+  playAgainButton.addEventListener('click', function(){location.reload()});
 }
