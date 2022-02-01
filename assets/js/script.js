@@ -400,7 +400,7 @@ function gameOver() {
   questionArea.classList.add('hide');
   gameOverMessage.classList.remove('hide');
   playAgainButton.classList.remove('hide');
-  playAgainEventListener();
+  playAgainEventListenerRefresh();
 }
 
 /**
@@ -414,13 +414,13 @@ function gameComplete() {
   questionArea.classList.add('hide');
   levelThreeComplete.classList.remove('hide');
   playAgainButton.classList.remove('hide');
-  playAgainEventListener();
+  playAgainEventListenerRefresh();
 }
 
 /**
  * EventListener function for play again button.
  * Refreshes the page to restart score and shuffle
  */
-function playAgainEventListener() {
+function playAgainEventListenerRefresh() {
   playAgainButton.addEventListener('click', function(){location.reload()});
 }
