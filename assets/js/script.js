@@ -221,16 +221,15 @@ window.addEventListener("click", function (event) {
 
 // This code on creating random numbers for the quiz to shuffle is mostly taken from Stack Overflow: https://stackoverflow.com/questions/18806210generating-non-repeating-random-numbers-in-js
 let nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-ranNums = [];
-i = levelOne.length;
-j = 0;
+let ranNums = [];
+let i = nums.length;
+let j = 0;
 
 while (i--) {
   j = Math.floor(Math.random() * (i + 1));
   ranNums.push(nums[j]);
   nums.splice(j, 1);
 }
-
 
 let currentQuestionIndex = ranNums[0];
 let x = 1;
