@@ -20,119 +20,117 @@
     <link rel="manifest" href="site.webmanifest">
 </head>
 
-<body>
-    <div class="background">
+<body class="background">
 
-        <!-- header and logo -->
-        <header>
-            <a href="index.html" aria-label="This will go to homepage of Geo Quiz">
-                <h1 class="game-logo"><i class="fas fa-globe-americas"></i> Geo Quiz</h1>
-            </a>
-        </header>
+    <!-- header and logo -->
+    <header>
+        <a href="index.html" aria-label="This will go to homepage of Geo Quiz">
+            <h1 class="game-logo"><i class="fas fa-globe-americas"></i> Geo Quiz</h1>
+        </a>
+    </header>
 
-        <!-- game section -->
-        <section class="game-section">
-            <div class="game-container">
+    <!-- game section -->
+    <section class="game-section">
+        <div class="game-container">
 
-                <!-- homepage container: will be hidden when user initiates game -->
-                <div id="homepage-container">
-                    <h2>Welcome to Geo Quiz!</h2>
-                    <br>
-                    <h3>Test your geography knowledge with our three level quiz</h3>
-                    <button id="instructions"
-                        aria-label="This button will go to the instructions on how to play the game (opens in a modal window)"
-                        type="button"><i class="far fa-question-circle"></i> How To Play</button>
+        <!-- homepage container: will be hidden when user initiates game -->
+        <div id="homepage-container">
+            <h2>Welcome to Geo Quiz!</h2>
+            <br>
+            <h3>Test your geography knowledge with our three level quiz</h3>
+            <button id="instructions"
+                aria-label="This button will go to the instructions on how to play the game (opens in a modal window)"
+                type="button"><i class="far fa-question-circle"></i> How To Play</button>
 
-                    <!-- HTML code for modal mostly taken from W3 Schools page on modal windows: https://www.w3schools.com/howto/howto_css_modals.asp -->
-                    <div id="instructions-modal" class="modal">
-                        <div class="modal-content">
-                            <span class="close"><i class="far fa-times-circle"></i></span>
-                            <div class="modal-text">
-                                <h2>How To Play</h2>
-                                <br>
-                                <p>Click "Let's Play!" to begin the game. There are three levels, each containing ten
-                                    questions, for a total of thirty multiple choice questions. You must beat the
-                                    current level to move onto the next level, or else you will have to start over.
-                                </p>
-                                <br>
-                                <p>How to beat the levels:</p>
-                                <ul>
-                                    <li>Level 1: Score a total of 6 points</li>
-                                    <li>Level 2: Score a total of 12 points</li>
-                                    <li>Level 3: Score a total of 20 points</li>
-                                </ul>
-                                <br>
-                                <p>Good luck!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <button id="start" aria-label="This button will start the game" type="button"><i
-                            class="fas fa-gamepad"></i> Let's Play!</button>
-                </div>
-
-                <p id="scores" class="hide">Score: <span id="score">0</span></p>
-
-                <!-- question area: will appear when user initiates game -->
-                <div id="question-area" class="hide">
-                    <div id="question-text"></div>
-                    <div class="button-container">
-                        <button class="choice-btn" data-type="a" aria-label="option A button"></button>
-                        <button class="choice-btn" data-type="b" aria-label="option B button"></button>
-                        <button class="choice-btn" data-type="c" aria-label="option C button"></button>
-                        <button class="choice-btn" data-type="d" aria-label="option D button"></button>
-                    </div>
-                    <br>
-                    <p id="feedback-text"></p>
-                    <button id="next-button" class="hide"
-                        aria-label="This button will go to the next question or message of the quiz"
-                        data-type="submit">Next</button>
-                </div>
-
-                <!-- level complete messages: appear when user meets certain conditions -->
-                <div id="level-one-complete" class="hide">
-                    <div>
-                        <h2>Level 1 Complete! <i class="fas fa-laugh-beam"></i></h2>
+            <!-- HTML code for modal mostly taken from W3 Schools page on modal windows: https://www.w3schools.com/howto/howto_css_modals.asp -->
+            <div id="instructions-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close"><i class="far fa-times-circle"></i></span>
+                    <div class="modal-text">
+                        <h2>How To Play</h2>
                         <br>
-                        <p class="message-style">Well done on completing level one. You have scored at least 6 points! Questions will get harder 
-                            from here. Move onto the next round?</p>
-                    </div>
-                </div>
-
-                <div id="level-two-complete" class="hide">
-                    <div>
-                        <h2>Level 2 Complete! <i class="fas fa-laugh-beam"></i></h2>
+                        <p>Click "Let's Play!" to begin the game. There are three levels, each containing ten
+                            questions, for a total of thirty multiple choice questions. You must beat the
+                            current level to move onto the next level, or else you will have to start over.
+                        </p>
                         <br>
-                        <p class="message-style">Well done! You are proving to be a geography master. You have scored at least 12 points!
-                            The final round is very difficult. Are you ready?</p>
-                    </div>
-                </div>
-
-                <div id="level-three-complete" class="hide">
-                    <div>
-                        <h2>Game Complete! <i class="fas fa-medal"></i></h2>
+                        <p>How to beat the levels:</p>
+                        <ul>
+                            <li>Level 1: Score a total of 6 points</li>
+                            <li>Level 2: Score a total of 12 points</li>
+                            <li>Level 3: Score a total of 20 points</li>
+                        </ul>
                         <br>
-                        <p class="message-style"> Well done! You are truly a geography expert. You have scored at least 20 points, bravo. Would
-                            you like to play again?</p>
+                        <p>Good luck!</p>
                     </div>
                 </div>
-
-                <!-- game over message: appear when user meets certain condition -->
-                <div id="game-over" class="hide">
-                    <div>
-                        <h2>Game Over! <i class="fas fa-frown"></i></h2>
-                        <br>
-                        <p class="message-style">Oh no! You have scored less than the requirement to move on. Would you like to try again?</p>
-                    </div>
-                </div>
-
-                <button id="next-level" aria-label="This button will go to the next level" class="hide"
-                    data-type="submit">Let's Go!</button>
-                <button id="play-again" aria-label="This button will go to the main homepage of the game" class="hide"
-                    data-type="submit">Play again!</button>
             </div>
-        </section>
-    </div>
+            <br>
+            <button id="start" aria-label="This button will start the game" type="button"><i
+                    class="fas fa-gamepad"></i> Let's Play!</button>
+        </div>
+
+        <p id="scores" class="hide">Score: <span id="score">0</span></p>
+
+        <!-- question area: will appear when user initiates game -->
+        <div id="question-area" class="hide">
+            <div id="question-text"></div>
+            <div class="button-container">
+                <button class="choice-btn" data-type="a" aria-label="option A button"></button>
+                <button class="choice-btn" data-type="b" aria-label="option B button"></button>
+                <button class="choice-btn" data-type="c" aria-label="option C button"></button>
+                <button class="choice-btn" data-type="d" aria-label="option D button"></button>
+            </div>
+            <br>
+            <p id="feedback-text"></p>
+            <button id="next-button" class="hide"
+                aria-label="This button will go to the next question or message of the quiz"
+                data-type="submit">Next</button>
+        </div>
+
+        <!-- level complete messages: appear when user meets certain conditions -->
+        <div id="level-one-complete" class="hide">
+            <div>
+                <h2>Level 1 Complete! <i class="fas fa-laugh-beam"></i></h2>
+                <br>
+                <p class="message-style">Well done on completing level one. You have scored at least 6 points! Questions will get harder 
+                    from here. Move onto the next round?</p>
+            </div>
+        </div>
+
+        <div id="level-two-complete" class="hide">
+            <div>
+                <h2>Level 2 Complete! <i class="fas fa-laugh-beam"></i></h2>
+                <br>
+                <p class="message-style">Well done! You are proving to be a geography master. You have scored at least 12 points!
+                    The final round is very difficult. Are you ready?</p>
+            </div>
+        </div>
+
+        <div id="level-three-complete" class="hide">
+            <div>
+                <h2>Game Complete! <i class="fas fa-medal"></i></h2>
+                <br>
+                <p class="message-style"> Well done! You are truly a geography expert. You have scored at least 20 points, bravo. Would
+                    you like to play again?</p>
+            </div>
+        </div>
+
+        <!-- game over message: appear when user meets certain condition -->
+        <div id="game-over" class="hide">
+            <div>
+                <h2>Game Over! <i class="fas fa-frown"></i></h2>
+                <br>
+                <p class="message-style">Oh no! You have scored less than the requirement to move on. Would you like to try again?</p>
+            </div>
+        </div>
+
+        <button id="next-level" aria-label="This button will go to the next level" class="hide"
+            data-type="submit">Let's Go!</button>
+        <button id="play-again" aria-label="This button will go to the main homepage of the game" class="hide"
+            data-type="submit">Play again!</button>
+        
+    </section>
 
     <!-- footer -->
     <footer>

@@ -45,7 +45,7 @@ button {
     background-color: #5D748D;
     border: 1px solid;
     width: 200px;
-    height: 60px;
+    height: 55px;
     font-size: inherit;
     display: block;
     margin: 0 auto;
@@ -56,6 +56,13 @@ button {
 button:hover {
     color: #5D748D;
     background-color: white;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(93, 116, 141, 0.8)
 }
 
 /* style to hide certain elements when called */
@@ -118,7 +125,7 @@ button:hover {
 .game-logo {
     text-transform: uppercase;
     margin: 15px 15px 0;
-    font-size: 300%;
+    font-size: 200%;
     color: white;
 }
 
@@ -131,7 +138,7 @@ button:hover {
 
 .game-container {
     padding-top: 50px;
-    height: 500px;
+    height: 480px;
     width: 50%;
     background: #5D748D;
     position: absolute;
@@ -197,14 +204,14 @@ button:hover {
 }
 
 .footer-socialmedia i {
-    font-size: 175%;
-    padding: 2% 15%;
+    font-size: 150%;
+    padding: 1% 15%;
     margin: 1%;
-    color: black;
+    color: white;
 }
 
 .footer-socialmedia i:hover {
-    color: #5D748D;
+    color: black;
 }
 
 /* for media screens 1500px wide and up */
@@ -279,7 +286,7 @@ button:hover {
     }
 
     .footer-socialmedia i {
-        padding: 6% 15%;
+        padding: 5% 15%;
     }
 
 }
@@ -324,7 +331,7 @@ button:hover {
     .game-container {
         padding-top: 10px;
         width: 90%;
-        height: 515px;
+        height: 500px;
     }
 
     button {
@@ -343,17 +350,9 @@ button:hover {
     }
     
     .game-container {
-        width: 80%;
+        width: 90%;
         height: 450px;
-        padding-top: 5px;
-    }
-
-    #question-text,
-    #level-one-complete,
-    #level-two-complete,
-    #level-three-complete,
-    #game-over {
-        margin-bottom: 5%;
+        padding-top: 10px;
     }
     
 }
