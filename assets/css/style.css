@@ -69,7 +69,7 @@ button:hover {
 .background {
     overflow: hidden;
     background: url(../images/game-background.jpeg) no-repeat center / cover;
-    height: 900px;
+    height: 100vh;
     width: 100%;
 }
 
@@ -117,7 +117,7 @@ button:hover {
 
 .game-logo {
     text-transform: uppercase;
-    margin: 15px;
+    margin: 15px 15px 0;
     font-size: 300%;
     color: white;
 }
@@ -126,7 +126,7 @@ button:hover {
     position: relative;
     display: flex;
     justify-content: center;
-    top: 50px;
+    top: 45px;
 }
 
 .game-container {
@@ -198,7 +198,7 @@ button:hover {
 
 .footer-socialmedia i {
     font-size: 175%;
-    padding: 3% 15%;
+    padding: 2% 15%;
     margin: 1%;
     color: black;
 }
@@ -256,16 +256,8 @@ button:hover {
         height: 50px;
     }
 
-    .background {
-        height: 715px;
-    }
-
     .game-section {
         top: 15px;
-    }
-
-    .game-logo {
-        margin-bottom: 0;
     }
 
     .modal-content {
@@ -306,6 +298,11 @@ button:hover {
         font-size: inherit;
     }
 
+    .modal-content {
+        width: 80%;
+        height: 325px;
+    }
+
     .game-container {
         height: 540px;
     }
@@ -320,12 +317,43 @@ button:hover {
     
 }
 
-/* for media screens 300px wide and down */
+/* for media screens 380px wide and down */
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 380px) {
 
-    .modal-content {
-        height: 400px;
+    .game-container {
+        padding-top: 10px;
+        width: 90%;
+        height: 515px;
     }
 
+    button {
+        width: 225px;
+        height: 45px;
+    }
+
+}
+
+/* for media screens 600px high and down */
+
+@media screen and (max-height: 600px) {
+    
+    button {
+        width: 225px;
+    }
+    
+    .game-container {
+        width: 80%;
+        height: 450px;
+        padding-top: 5px;
+    }
+
+    #question-text,
+    #level-one-complete,
+    #level-two-complete,
+    #level-three-complete,
+    #game-over {
+        margin-bottom: 5%;
+    }
+    
 }
