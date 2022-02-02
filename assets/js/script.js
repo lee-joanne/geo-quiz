@@ -296,6 +296,7 @@ function showQuestions() {
     questionText.textContent = currentQuestion.question;
 
     for (let i = 0; i < choiceButtons.length; i++) {
+      choiceButtons[i].classList.remove("hover-disable");
       choiceButtons[i].textContent = currentQuestion.options[i];
       choiceButtons[i].setAttribute("data-type", currentQuestion.options[i]);
     }
@@ -303,7 +304,17 @@ function showQuestions() {
     scoreRequirementConditionCheck();
     resetQuestionIndex();
   }
-  enabledAndBindEventListenerChoiceButtons();
+  buttonCheckAnswer();
+}
+
+/**
+ * Iterates through choice buttons.
+ * Event listener to run `checkAnswer()`.
+ */
+function buttonCheckAnswer() {
+  for (let i = 0; i < choiceButtons.length; i++) {
+    choiceButtons[i].addEventListener("click", checkAnswer);
+  }
 }
 
 /**
@@ -342,17 +353,6 @@ function scoreRequirementConditionCheck() {
 }
 
 /**
- * Enables the multiple choice options, choiceButtons, to be clickable.
- * Event listener to run `checkAnswer()`.
- */
-function enabledAndBindEventListenerChoiceButtons() {
-  for (let i = 0; i < choiceButtons.length; i++) {
-    choiceButtons[i].disabled = false;
-    choiceButtons[i].addEventListener("click", checkAnswer);
-  }
-}
-
-/**
  * The user's input will be checked whether they have selected the correct or incorrect answer.
  * Correct answer shows the feedback message "correct".
  * Incorrect answer shows feedback message containing correct answer.
@@ -368,7 +368,7 @@ function checkAnswer(e) {
     feedbackText.innerText = `Sorry! The answer was ${currentQuestion.answer}`;
   }
   for (let i = 0; i < choiceButtons.length; i++) {
-    choiceButtons[i].disabled = true;
+    choiceButtons[i].classList.add("hover-disable");
   }
   counter();
   selectNextQuestion();

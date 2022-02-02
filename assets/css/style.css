@@ -71,6 +71,12 @@ footer {
     display: none;
 }
 
+/* disables the choice buttons from hovering after answer is selected */
+
+.hover-disable {
+    pointer-events: none;
+}
+
 /* background image */
 
 .background {
