@@ -106,7 +106,7 @@ footer {
     clear: both;
 }
 
-.modal-text > h3 {
+.modal-text>h3 {
     margin-bottom: 0;
 }
 
@@ -329,7 +329,7 @@ footer {
     #next-question {
         width: 150px;
     }
-    
+
 }
 
 /* for media screens 380px wide and down */
@@ -394,6 +394,5 @@ footer {
         font-size: 150%;
         padding: 5% 15%;
     }
-
+    
 }
-
