@@ -34,13 +34,13 @@ window.addEventListener("click", function (event) {
   }
 });
 
-// This code on creating random numbers for the quiz to shuffle is mostly taken from Stack Overflow: https://stackoverflow.com/questions/18806210generating-non-repeating-random-numbers-in-js
-// Shuffles the quiz question array.
-let nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 let ranNums = [];
 let i = nums.length;
 let j = 0;
 
+// This code on creating random numbers for the quiz to shuffle is mostly taken from Stack Overflow: https://stackoverflow.com/questions/18806210generating-non-repeating-random-numbers-in-js
+// Shuffles the quiz question array.
 while (i--) {
   j = Math.floor(Math.random() * (i + 1));
   ranNums.push(nums[j]);
