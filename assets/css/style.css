@@ -62,7 +62,7 @@ footer {
     position: absolute;
     bottom: 0;
     width: 100%;
-    background-color: rgba(93, 116, 141, 0.8)
+    background-color: rgba(93, 116, 141, 0.8);
 }
 
 /* style to hide certain elements when called */
@@ -99,11 +99,15 @@ footer {
     padding: 20px;
     border: 1px solid #5D748D;
     width: 40%;
-    height: 450px;
+    height: 425px;
 }
 
 .modal-text {
     clear: both;
+}
+
+.modal-text > h3 {
+    margin-bottom: 0;
 }
 
 /* close, close:hover, and close:focus code mostly taken from W3 Schools site on modal windows: https://www.w3schools.com/howto/howto_css_modals.asp */
@@ -206,7 +210,7 @@ footer {
 .footer-socialmedia i {
     font-size: 150%;
     padding: 1% 15%;
-    margin: 1%;
+    margin: 0.5%;
     color: white;
 }
 
@@ -220,6 +224,10 @@ footer {
 
     .game-container {
         width: 40%;
+    }
+
+    .modal-content {
+        height: 400px;
     }
 }
 
@@ -244,7 +252,7 @@ footer {
 
     .modal-content {
         width: 50%;
-        height: 325px;
+        height: 300px;
         margin: 20% auto;
     }
 
@@ -268,7 +276,7 @@ footer {
     }
 
     .modal-content {
-        height: 350px;
+        height: 325px;
         margin: 30% auto;
     }
 
@@ -286,7 +294,7 @@ footer {
     }
 
     .footer-socialmedia i {
-        padding: 5% 15%;
+        padding: 4% 15%;
     }
 
 }
@@ -306,8 +314,8 @@ footer {
     }
 
     .modal-content {
-        width: 80%;
-        height: 325px;
+        width: 60%;
+        height: 280px;
     }
 
     .game-container {
@@ -324,7 +332,6 @@ footer {
     
 }
 
-
 /* for media screens 380px wide and down */
 
 @media screen and (max-width: 380px) {
@@ -338,6 +345,10 @@ footer {
     button {
         width: 225px;
         height: 45px;
+    }
+
+    .modal-content {
+        width: 85%;
     }
 
 }
@@ -364,10 +375,13 @@ footer {
         font-size: inherit;
     }
 
+    .modal-content {
+        height: 190px;
+    }
+
     .footer-socialmedia i {
         font-size: 100%;
         padding: 0.5% 15%;
-
     }
 
 }
@@ -379,7 +393,6 @@ footer {
     .footer-socialmedia i {
         font-size: 150%;
         padding: 5% 15%;
-
     }
 
 }
