@@ -65,13 +65,13 @@ footer {
     background-color: rgba(93, 116, 141, 0.8);
 }
 
-/* style to hide certain elements when called */
+/* style to hide certain elements when called in JavaScript */
 
 .hide {
     display: none;
 }
 
-/* main background image */
+/* background image */
 
 .background {
     overflow: hidden;
@@ -336,15 +336,15 @@ footer {
 
 @media screen and (max-width: 380px) {
 
+    button {
+        width: 225px;
+        height: 45px;
+    }
+    
     .game-container {
         padding-top: 10px;
         width: 90%;
         height: 500px;
-    }
-
-    button {
-        width: 225px;
-        height: 45px;
     }
 
     .modal-content {
@@ -370,14 +370,14 @@ footer {
         font-size: 10px;
     }
 
-    .game-container {
-        height: 380px;
-    }
-
     button,
     #question-text,
     .choice-btn {
         font-size: inherit;
+    }
+
+    .game-container {
+        height: 380px;
     }
 
     .modal-content {
