@@ -215,7 +215,7 @@ footer {
 
 .footer-socialmedia i {
     font-size: 150%;
-    padding: 1% 15%;
+    padding: 1.5% 15%;
     margin: 0.5%;
     color: white;
 }
@@ -300,7 +300,7 @@ footer {
     }
 
     .footer-socialmedia i {
-        padding: 4% 15%;
+        padding: 4.5% 15%;
     }
 
 }
@@ -357,11 +357,6 @@ footer {
         width: 85%;
     }
 
-    .footer-socialmedia i {
-        font-size: 100%;
-        padding: 0.25% 15%;
-    }
-
 }
 
 /* for media screens 320px wide and down (Am I Responsive mobile viewport) */
@@ -388,6 +383,11 @@ footer {
 
     .modal-content {
         height: 190px;
+    }
+
+    .footer-socialmedia i {
+        font-size: 100%;
+        padding: 0.25% 15%;
     }
 
 }
