@@ -16,7 +16,7 @@ let feedbackText = document.getElementById("feedback-text");
 
 // Wait for the DOM to finish loading before modal window access and running the game
 document.addEventListener("DOMContentLoaded", function () {
-    /* JavaScript code on modal window and close taken from W3 Schools page on modal windows: https://www.w3schools.com/howto/howto_css_modals.asp */
+    // JavaScript code on modal window and close taken from W3 Schools page on modal windows: https://www.w3schools.com/howto/howto_css_modals.asp
     // Modal window will open when user selects 'How To Play' button.
     let instructionsModal = document.getElementById("instructions-modal");
     let instructionsBtn = document.getElementById("instructions-button");
@@ -38,13 +38,13 @@ document.addEventListener("DOMContentLoaded", function () {
     startButton.addEventListener("click", runLevel);
 });
 
+// This code on creating random numbers for the quiz to shuffle is mostly taken from Stack Overflow: https://stackoverflow.com/questions/18806210/generating-non-repeating-random-numbers-in-js
 let nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 let ranNums = [];
 let i = nums.length;
 let j = 0;
 
-// This code on creating random numbers for the quiz to shuffle is mostly taken from Stack Overflow: https://stackoverflow.com/questions/18806210generating-non-repeating-random-numbers-in-js
-// Shuffles the quiz question array.
+// Shuffles the quiz question array
 while (i--) {
     j = Math.floor(Math.random() * (i + 1));
     ranNums.push(nums[j]);
