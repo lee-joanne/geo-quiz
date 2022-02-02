@@ -73,7 +73,7 @@ footer {
 
 /* disables the multiple choice buttons from being clickable/hoverable after answer is selected */
 
-.hover-disable {
+.button-disable {
     pointer-events: none;
 }
 

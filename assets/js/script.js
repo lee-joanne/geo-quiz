@@ -260,14 +260,14 @@ function runLevel() {
  * Hides rest of elements.
  */
 function showGameBoard() {
-  homepageContainer.classList.add('hide');
-  questionArea.classList.remove('hide');
-  scores.classList.remove('hide');
-  levelOneComplete.classList.add('hide');
-  levelTwoComplete.classList.add('hide');
-  levelThreeComplete.classList.add('hide');
-  gameOverMessage.classList.add('hide');
-  playAgainButton.classList.add('hide');
+  homepageContainer.classList.add("hide");
+  questionArea.classList.remove("hide");
+  scores.classList.remove("hide");
+  levelOneComplete.classList.add("hide");
+  levelTwoComplete.classList.add("hide");
+  levelThreeComplete.classList.add("hide");
+  gameOverMessage.classList.add("hide");
+  playAgainButton.classList.add("hide");
 }
 
 /**
@@ -277,7 +277,7 @@ function showGameBoard() {
  * After, runs `buttonCheckAnswer()`.
  */
 function showQuestions() {
-  nextLevelButton.classList.add('hide');
+  nextLevelButton.classList.add("hide");
   switch (currentRound) {
     case 1:
       currentQuestion = levelOne[currentQuestionIndex];
@@ -291,12 +291,12 @@ function showQuestions() {
   }
 
   if (x <= 10) {
-    nextButton.classList.add('hide');
-    feedbackText.innerHTML = '';
+    nextButton.classList.add("hide");
+    feedbackText.innerHTML = "";
     questionText.textContent = currentQuestion.question;
 
     for (let i = 0; i < choiceButtons.length; i++) {
-      choiceButtons[i].classList.remove("hover-disable");
+      choiceButtons[i].classList.remove("button-disable");
       choiceButtons[i].textContent = currentQuestion.options[i];
       choiceButtons[i].setAttribute("data-type", currentQuestion.options[i]);
     }
@@ -361,18 +361,18 @@ function scoreRequirementConditionCheck() {
  * Unhides nextButton.
  */
 function checkAnswer(e) {
-  if (e.target.getAttribute('data-type') === currentQuestion.answer) {
+  if (e.target.getAttribute("data-type") === currentQuestion.answer) {
     feedbackText.innerText = "Correct!";
     incrementScore();
   } else {
     feedbackText.innerText = `Sorry! The answer was ${currentQuestion.answer}`;
   }
   for (let i = 0; i < choiceButtons.length; i++) {
-    choiceButtons[i].classList.add("hover-disable");
+    choiceButtons[i].classList.add("button-disable");
   }
   counter();
   selectNextQuestion();
-  nextButton.classList.remove('hide');
+  nextButton.classList.remove("hide");
 }
 
 /**
@@ -406,14 +406,14 @@ function selectNextQuestion() {
 function levelCompleted() {
   switch (currentRound) {
     case 1:
-      questionArea.classList.add('hide');
-      levelOneComplete.classList.remove('hide');
-      nextLevelButton.classList.remove('hide');
+      questionArea.classList.add("hide");
+      levelOneComplete.classList.remove("hide");
+      nextLevelButton.classList.remove("hide");
       break;
     case 2:
-      questionArea.classList.add('hide');
-      levelTwoComplete.classList.remove('hide');
-      nextLevelButton.classList.remove('hide');
+      questionArea.classList.add("hide");
+      levelTwoComplete.classList.remove("hide");
+      nextLevelButton.classList.remove("hide");
       break;
     case 3:
       gameComplete();
@@ -436,9 +436,9 @@ function resetQuestionIndex() {
  * Runs `playAgainEventListener()`.
  */
 function gameOver() {
-  questionArea.classList.add('hide');
-  gameOverMessage.classList.remove('hide');
-  playAgainButton.classList.remove('hide');
+  questionArea.classList.add("hide");
+  gameOverMessage.classList.remove("hide");
+  playAgainButton.classList.remove("hide");
   playAgainEventListenerRefresh();
 }
 
@@ -448,9 +448,9 @@ function gameOver() {
  * Runs `playAgainEventListener()`.
  */
 function gameComplete() {
-  questionArea.classList.add('hide');
-  levelThreeComplete.classList.remove('hide');
-  playAgainButton.classList.remove('hide');
+  questionArea.classList.add("hide");
+  levelThreeComplete.classList.remove("hide");
+  playAgainButton.classList.remove("hide");
   playAgainEventListenerRefresh();
 }
 
@@ -458,7 +458,7 @@ function gameComplete() {
  * playAgainButton will refresh the page when clicked.
  */
 function playAgainEventListenerRefresh() {
-  playAgainButton.addEventListener('click', function () {
+  playAgainButton.addEventListener("click", function () {
     location.reload();
   });
 }
