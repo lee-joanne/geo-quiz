@@ -274,7 +274,7 @@ function showGameBoard() {
  * Switch statement will loop through different quiz questions depending on the currentRound.
  * Question choices and question text from quiz questions inserted as text content
  * When all ten questions have been iterated, runs `scoreRequirementConditionCheck()` and `resetQuestionIndex()`
- * After, runs `enabledAndBindEventListenerChoiceButtons()`.
+ * After, runs `buttonCheckAnswer()`.
  */
 function showQuestions() {
   nextLevelButton.classList.add('hide');
@@ -308,8 +308,8 @@ function showQuestions() {
 }
 
 /**
- * Iterates through choice buttons.
- * Event listener to run `checkAnswer()`.
+ * Iterates through choiceButtons.
+ * Event listener runs `checkAnswer()`.
  */
 function buttonCheckAnswer() {
   for (let i = 0; i < choiceButtons.length; i++) {
