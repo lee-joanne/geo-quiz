@@ -419,6 +419,7 @@ function levelCompleted() {
       gameComplete();
       break;
   }
+  nextLevelButton.addEventListener("click", runLevel);
 }
 
 /**
