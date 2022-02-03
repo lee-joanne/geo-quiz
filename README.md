@@ -61,7 +61,7 @@ Test your geography skills with Geo Quiz! This game features three levels where 
 * ### Existing Features
 
 - Logo
-  -  The logo is an h1 heading at the very top of the game. A Font Awesome icon of the earth is included to make the logo look more appealing and related to the game. The user can fully understand the theme of the quiz without having to read much further. The white font of the logo contrasts the conveniently blue background image so increase acessibility for the user. The logo also serves as a link to redirect the user to the index.html page, which will ultimately refresh the game. 
+  -  The logo is an h1 heading at the very top of the game. A Font Awesome icon of the globe is included to make the logo look more appealing and related to the game. The user can fully understand the theme of the quiz without having to read much further. The white font of the logo contrasts the conveniently blue background image so increase acessibility for the user. The logo also serves as a link to redirect the user to the index.html page, which will ultimately refresh the game. 
 
   ![Screenshot of the logo](assets/documentation/features-logo.png)
 
@@ -136,7 +136,7 @@ Test your geography skills with Geo Quiz! This game features three levels where 
       - Google Fonts was used to import the font Dosis. Information on Dosis for this README is also taken from Google Fonts.
   
   2. [Font Awesome](https://fontawesome.com/) 
-      - Font Awesome was used throughout the pages for their icons to make the page look more aesthetically pleasing.
+      - Font Awesome was used throughout the website for their icons to make the page look more aesthetically pleasing.
 
   3. [Balsamiq](https://www.balsamiq.com/)
       - Balsamiq was used to create low-fidelity wireframes of the website. 
@@ -162,11 +162,14 @@ Test your geography skills with Geo Quiz! This game features three levels where 
   10. [Ecotrust-Canada Markdown-toc](https://ecotrust-canada.github.io/markdown-toc/)
       - Ecotrust-Canada Markdown was used to create the table of contents for this README. 
 
+  11. [Favicon.io](https://favicon.io/emoji-favicons/globe-showing-americas/)
+      - Favicon.io was used to get the globe favicon for the website. 
+
 ## Testing
 
 * ### Validator Testing
 
-To accurately test the code of the website, JSHint, the W3C Markup Validator, W3C CSS Validation Service were used to validate all code used in the project to spot any errors in the syntax. No errors were found in the JS, HTML, and CSS files. 
+To accurately test the code of the website, JSHint, the W3C Markup Validator, W3C CSS Validation Service were used to validate all code used in the project to spot any errors in the syntax. No errors were found in the JS, HTML, and CSS files. In JSHint, all separate JavaScript files were copied and pasted together. 
 
   - [JSHint](https://jshint.com/)
 ![JavaScript Results](assets/documentation/javascript-validator.png)
@@ -185,6 +188,55 @@ The website was also tested on Lighthouse to test accessibility. When tested, ac
 
 * ### Unfixed Bugs
 
+- The main unfixed bug to mention is when the website is previewed on Google DevTools in the Surface Duo and Nest Hub viewports, the website is not very vertically responsive to these devices. The homepage container / question area will overlap the footer container. In the Nest Hub viewport, the 'Next' button will halfway inaccessible due to the footer container, creating a bad user experience. I tried to fix this bug by creating a height media query. However, when adding height media queries, the smaller devices such as iPhone SE and iPhone XR viewports got tampered with so I have decided to prioritize width responsiveness over height responsiveness since users will most likely be viewing from iPhone SE and iPhone XR devices than Nest Hub and Surface Duo devices. 
 
+* ### Fixed Bugs
 
+- Bugs that have been fixed during the process of building this website are:
 
+  - When the game switches from one container to another (hompage container to question area) or moving from question area to level completed / game over, certain HTML elements would remain on the div such as paragraphs, headings, or buttons. This was fixed by creating a 'hide' class in the CSS with display: none to be called in the JavaScript file whenever specific HTML elements need to be hidden or called. 
+
+  - At first, when the user selects a multiple choice answer, the user was able to click any multiple choice button again to infinitely increment their score as they wish and change their answer. I fixed this issue by creating a CSS class 'button-disable' with pointer-events: none to be applied to the buttons after the user selects an answer in the JavaScript function. After the user moves to the next question, the game will remove the 'button-disable' class to make the buttons functional again. 
+
+  - The earlier models of the game had a background image height of 900px or so. This made the website scrollable in smaller screens but in larger screens, there was white space underneath the footer. It would be terrible user experience for the user to have to scroll up and down a quiz game while playing on a tablet or mobile device. To fix this, I have made the background image 100vh to fill up the user's screen and to avoid having to scroll on the page. This makes the game much more accessible and avoids unnecessary scrolling for the user. However, due to this, it was difficult to make the game more responsive for smaller devices because the homepage container / question area would overlap the footer easily. To fix this, I have made very thorough and specific media queries for most devices for more users to be able to enjoy this game without this issue. For the 'Am I Responsive' website, I have made a special media query for the website to show perfectly on the mobile device viewport. The game is also responsive on the Galaxy Fold. 
+
+  - It was difficult for the game to loop through the levelTwo and levelThree questions. The JavaScript function created would loop through levelOne questions but had issues with iterating through levelTwo questions after the 'Level One Complete' message came up. The code just would not iterate levelTwo questions and would go straight to 'Level Two Completed' message. A fellow Code Institute student on Slack suggested to use a Switch Statement to fix this issue and the game worked perfectly after incorporating this feature. 
+
+  - It was difficult to come up with a way to reset the score and reshuffle the questions at the end of the quiz when the user clicks 'Play Again'. The shuffle in the JavaScript file is not a function so it is not able to be called at specific parts of the game. To fix this issue, I have added an event listener to refresh the entire page when clicked so the score and shuffle will both happen automatically. I have added a note to the user in the 'Game Complete' and 'Game Over' messages explaining to the user the page will refresh for the purpose of reshuffling the questions and resetting the score. 
+
+  - Not so much a bug, but at the beginning of the project I had made my commit messages very brief and simple. Upon receiving feedback from PP1 halfway through this project, I have tried to make my git messages much more descriptive and clear to ensure each git commit is properly documented.
+
+* ### Further Testing
+
+- The website has been tested on different browsers including Chrome, Safari, and Firefox. Large monitors (LG and Samsung), laptops (MacBook Early 2016, MacBook Pro 2020, ASUS 2021), tablets (iPad Pro), and devices (iPhone 13 Mini, iPhone 13, iPhone 12, iPhone 11, Samsung Galaxy A5, Xiaomi Redmi 9) have been used to check the quality and responsiveness of the game. The entire gameplay was perfectly responsive. 
+
+- Using Google DevTools, I have tested the responsiveness on all of the devices listed below. As mentioned earlier, Nest Hub and Surface Duo are not perfectly responsiveness due to the height viewports. 
+
+![Screenshot of DevTools devices](assets/documentation/devtools.png)
+
+- I have played the game many times to test that the game will give the correct feedback to the user regarding whether the correct or incorrect answer has been selected. As well, whether less than 6 points will go to 'Game Over' and if over 6 points will go to 'Level One Complete'. I have tested to ensure the game will go to 'Game Over' again when the user scores less than 12 in level two, and the user will see 'Level Two Completed' if they score 12 and above. I tested the user will see 'Game Over' when they score under 20 in level three, and will see 'Game Completed' when they score over 20. I have tested the 'Play Again' button to ensure the refresh will reset the user's score and reshuffle all questions in level one, two, and three.
+
+## Deployment
+
+The website was deployed using GitHub Pages. The following steps were taken for the deployment process:
+
+  1. Log in to **[GitHub](https://github.com/)**.
+  2. Click on the profile icon to locate **'Your repositories'**. 
+  3. On the repository page, click on the repository you wish to deploy.
+  4. At the top of the repository, locate the **'Settings'** link and click.
+  5. On the Settings page, locate the **'Pages'** section in the left-hand navigation section and click.
+  6. On the GitHub Pages page, under **'Source'** click **'Main'**. Click **'Save'**.
+  7. Refresh the page and the live link is ready. 
+
+  [View Live Project Here](https://lee-joanne.github.io/cork-paints/)
+
+  The following steps were taken for the cloning process: 
+
+  1. Log in to **[GitHub](https://github.com/)**.
+  2. Click on the profile icon to locate **'Your repositories'**. 
+  3. On the repository page, click on the repository you wish to clone.
+  4. Under **'Code'**, see the different cloning options, HTTPS, SSH, and GitHub CLI. Click the prefered cloning option, and then copy the link provided. 
+  5. Open **Terminal**.
+  6. In Terminal, change the current working directory to the desired location of the cloned directory.
+  7. Type git clone, and then paste the URL copied from GitHub earlier. 
+  8. Type **Enter** to create the local clone. 
