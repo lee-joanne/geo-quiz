@@ -234,13 +234,13 @@ The website was also tested on Lighthouse to test accessibility. When tested, ac
 
 * ### Further Testing
 
-- The website has been tested on different browsers including Chrome, Safari, and Firefox. Large monitors (LG, Dell, Samsung), laptops (MacBook Early 2016, MacBook Pro 2020, ASUS 2021), tablets (iPad Pro), and devices (iPhone 13 Mini, iPhone 13, iPhone 12, iPhone 11, Samsung Galaxy A5, Xiaomi Redmi 9) have been used to check the quality and responsiveness of the game. The entire gameplay was perfectly responsive. 
+  - The website has been tested on different browsers including Chrome, Safari, and Firefox. Large monitors (LG, Dell, Samsung), laptops (MacBook Early 2016, MacBook Pro 2020, ASUS 2021), tablets (iPad Pro), and devices (iPhone 13 Mini, iPhone 13, iPhone 12, iPhone 11, Samsung Galaxy A5, Xiaomi Redmi 9) have been used to check the quality and responsiveness of the game. The entire gameplay was perfectly responsive. 
 
-- Using Google DevTools, I have tested the responsiveness on all of the devices listed below. As mentioned earlier, Nest Hub and Surface Duo are not perfectly responsiveness due to the height viewports. 
+  - Using Google DevTools, I have tested the responsiveness on all of the devices listed below. As mentioned earlier, Nest Hub and Surface Duo are not perfectly responsiveness due to the height viewports. 
 
-![Screenshot of DevTools devices](assets/documentation/devtools.png)
+  ![Screenshot of DevTools devices](assets/documentation/devtools.png)
 
-- I have played the game many times to test that the game will give the correct feedback to the user regarding whether the correct or incorrect answer has been selected. As well, whether less than 6 points will go to 'Game Over' and if over 6 points will go to 'Level One Complete'. I have tested to ensure the game will go to 'Game Over' again when the user scores less than 12 in level two, and the user will see 'Level Two Completed' if they score 12 and above. I tested the user will see 'Game Over' when they score under 20 in level three, and will see 'Game Completed' when they score over 20. I have tested the 'Play Again' button to ensure the refresh will reset the user's score and reshuffle all questions in level one, two, and three.
+  - I have played the game many times to test that the game will give the correct feedback to the user regarding whether the correct or incorrect answer has been selected. As well, whether less than 6 points will go to 'Game Over' and if over 6 points will go to 'Level One Complete'. I have tested to ensure the game will go to 'Game Over' again when the user scores less than 12 in level two, and the user will see 'Level Two Completed' if they score 12 and above. I tested the user will see 'Game Over' when they score under 20 in level three, and will see 'Game Completed' when they score over 20. I have tested the 'Play Again' button to ensure the refresh will reset the user's score and reshuffle all questions in level one, two, and three.
 
 ## Deployment
 
