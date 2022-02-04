@@ -37,17 +37,17 @@ Test your geography skills with Geo Quiz! This game features three levels where 
 * ### User Stories
   - First Time Visitor Goals
 
-    1. As a First Time User, I want to fully understanding what this game is and the purpose of it the moment I enter the website. I can clearly see the purpose of the game in the title and headings of the website that it is a geography quiz to test my knowledge in geography.
+    1. As a First Time User, I want to fully understanding what this game is and the purpose of it the moment I enter the website. I can clearly see the purpose of the game in the title and headings of the website that this is a geography quiz to test my knowledge in geography.
 
     2. As a First Time User, I want to be able to understand how to play this game and what to expect. I can clearly see the 'How To Play' button which shows me thorough instructions in a modal window. I can clearly explained that I must score 6 points to beat level 1, 12 points to beat level 2, and 20 points to beat the game. The rules to beat the levels are in a list so I can clearly distinguish the rules from the rest of the instructions. 
 
-    3. As a First Time User, I want this website to be easy on the eyes and easy to navigate. I can clearly see that the website is nicely designed and everything is clearly placed. The title of the website is large at the header, the 'Let's Play' and 'How To Play' buttons are large and very visible so I know exactly how to navigate myself around the website. There are icons on the buttons as well, 'How To Play' resembling a question mark and 'Let's Play' featuring a game controller. This makes the website intuitive and I know exactly what each button will do before I even have to read them. 
+    3. As a First Time User, I want this website to be easy on the eyes and easy to navigate. I can clearly see that the website is nicely designed and everything is clearly placed. The title of the website is large at the header, the 'Let's Play' and 'How To Play' buttons are large and very visible so I know exactly how to navigate myself around the website. There are icons on the buttons as well, 'How To Play' featuring a question mark and 'Let's Play' featuring a game controller. This makes the website more intuitive and I know exactly what each button will do before I even have to read them. 
 
-    4. As a First Time User, I want to understand how many scores I have and if I have won the game or not. When I play the game, I can see the score at the top incrementing by 1 each time I get a question correct. The game also gives me feedback whether the answer is correct or not. If I guess incorrect, the game will tell me what the answer was. 
+    4. As a First Time User, I want to understand how many scores I have and if I have won the game or not. When I play the game, I can see the score at the top incrementing by 1 each time I get a question correct. The game also gives me feedback whether the answer is correct or not. If I guess incorrect, the game will tell me what the answer was. After I finish a level, the game lets me know whether I have passed the level or if I have failed. The game gives me the opportunity to try again.
  
   - Returning / Frequent Visitor Goals
 
-    1. As a Returning and Frequent Visitor, I want to be able to play this game again and have my score reset and the questions shuffled. At the 'game over' or 'level three completed' page, there is a button to play again that refreshes the entire page back to the homepage. Here, I can refresh my memory with the rules on how to beat each level and play the game from scratch and with shuffled questions. 
+    1. As a Returning and Frequent Visitor, I want to be able to play this game again and have my score reset and the questions shuffled. At the 'Game Over' or 'Level Three Completed' page, there is a button to play again that refreshes the entire page back to the homepage. Here, I can refresh my memory with the rules on how to beat each level and play the game from scratch and with shuffled questions. 
 
     2. As a Returning and Frequent Visitor, I want to be able to keep in touch with the creator of the website or perhaps keep in touch with updates to the game. When I scroll down, I see there are social media links at the bottom that I can click on and takes me to a different tab so I do not navigate out of the game website.
 
@@ -60,18 +60,18 @@ Test your geography skills with Geo Quiz! This game features three levels where 
     3. Darker Blue (#254153)
     4. Black
 
-    - The main colours I have selected for this website are blue (#5D748D), white, darker blue (#254153), and black. The main background image of the game is of blue skies and Greek statues. To adhere to the background image, the #5D748D shade of blue matches nicely and therefore was used as container for the game itself. The blue (#5D748D) shade was also used for the footer container with slight opacity to make it look more appealing. The buttons for the main functions of the game ('How To Play', 'Let's Play', multiple choice options) are also blue (#5D748D) with white bordering. White was used as the font colour (text and social media icons) to contrast nicely with the blue (#5D748D) background for high accessibility. The darker blue (#254153) shade was used for the 'Next', 'Play Again', and 'Let's Go' buttons to differentiate them from the multiple choice buttons or when the user will be moving onto the next part of the quiz. The darker blue (#254153) serves the purpose of signalling the user they have reached an 'end' (end of the question, end of the level, end of the game) and the button will take them to the next part. Black is used for social media links and 'X' in modal window instructions being hovered over to contrast the blue (#5D748D) background. 
+    - The main colours I have selected for this website are blue (#5D748D), white, darker blue (#254153), and black. The main background image of the game is of blue skies and Greek statues. To match the background image, the #5D748D shade of blue suits nicely and therefore was used as container for the game itself. The blue (#5D748D) shade was also used for the footer container with slight opacity to make it look more appealing. The buttons for the main functions of the game ('How To Play', 'Let's Play', multiple choice options) are also blue (#5D748D) with white bordering. White was used as the font colour (text and social media icons) to contrast nicely with the blue (#5D748D) background for high accessibility. The darker blue (#254153) shade was used for the 'Next', 'Play Again', and 'Let's Go' buttons to differentiate them from the multiple choice buttons and when the user will be moving onto the next part of the quiz. The darker blue (#254153) serves the purpose of signalling the user they have reached an 'end' (end of the question, end of the level, end of the game) and the button will take them to the next part. Black is used for social media links and 'X' in modal window instructions being hovered over to contrast the blue (#5D748D) background. 
 
   - Typography
 
     1. Dosis
     2. Sans Serif (fallback)
 
-    - The main font used is Dosis, as Sans Serif as the fallback font. Dosis is a rounded sans-serif type family, which makes the font look very readable to increase accessibility. The font looks very playful and eyecatching which compliments well with the purpose of the website. 
+    - The main font used is Dosis, as Sans Serif as the fallback font. Dosis is a rounded sans-serif type family, which makes the font look very readable to increase accessibility. The font looks very playful and eyecatching which compliments well with the purpose of the website (a game).
 
   - Imagery
 
-    - The background image contains a gorgeous photo of blue sunny skies and the Erechtheion temple in Athens, Greece. This ancient temple photo is extremely eyecatching, minimalistic, and bright which will give users a sense of welcome and excitement while preparing for the quiz. This background photo is perfect for the quiz because the Erechtheion temple is conveniently on the right side of the quiz game. Therefore, the imagery does not clash. The image goes perfectly well with the blue (#5D748D), white, and darker blue (#254153) colours selected. 
+    - The background image contains a gorgeous photo of blue sunny skies and the Erechtheion temple in Athens, Greece. This ancient temple photo is extremely eyecatching, minimalistic, and bright which will give users a sense of welcome and excitement while preparing for the quiz. This background photo is perfect for the quiz because the Erechtheion temple is conveniently on the right side of the quiz game. Therefore, the imagery does not clash with the game container. The image goes perfectly well with the blue (#5D748D), white, and darker blue (#254153) colours selected. 
 
 * ### Wireframes
   - Low-fidelity wireframes have been created using the program Balsamiq.
@@ -87,17 +87,17 @@ Test your geography skills with Geo Quiz! This game features three levels where 
 * ### Existing Features
 
 - Logo
-  -  The logo is an h1 heading at the very top of the game. A Font Awesome icon of the globe is included to make the logo look more appealing and related to the game. The user can fully understand the theme of the quiz without having to read much further. The white font of the logo contrasts the conveniently blue background image so increase acessibility for the user. The logo also serves as a link to redirect the user to the index.html page, which will ultimately refresh the game. 
+  -  The logo is an h1 heading at the very top of the game. A Font Awesome icon of the globe is included to make the logo look more appealing and related to the game. The user can fully understand the theme of the quiz without having to read much further. The white font of the logo contrasts the conveniently blue background image to increase acessibility. The logo also serves as a link to redirect the user to the index.html page, which will ultimately refresh the game. 
 
   ![Screenshot of the logo](assets/documentation/features-logo.png)
 
 - Footer
-  - The footer is at the very bottom of the page, with two social media icons large and in white. The icons are very spread apart so the user can easily click on the social media icon they wish. The icons are white to contrast the blue (#5D748D) footer container. The footer container contains opacity to make the footer look more appealing, rather than having a solid blue (#5D748D) line running across the bottom of the user's page. The icons will become black when hovered over, to assure the user the buttons are clickable and the user is about to select the correct one. 
+  - The footer is at the very bottom of the page, with two social media icons large and in white. The icons are very spread apart so the user can easily click on the social media icon they wish with minimal mistakes. The icons are white to contrast the blue (#5D748D) footer container. The footer container contains opacity to make the footer look more appealing, rather than having a solid blue (#5D748D) line running across the bottom of the user's page. The icons will become black when hovered over, to assure the user the buttons are clickable and the user is about to select the correct one. 
 
   ![Screenshot of the footer](assets/documentation/features-footer.png)
 
 - Homepage
-  - The homepage of the game consists of a solid blue (#5D748D) container (div) with white font for high accessibility. The h2 heading welcomes the user to the game and the h3 heading gives a brief introduction of the game's purpose. After the headings, there are only two buttons available to make the homepage look clean, neat, and minimalistic without trying to confuse the user. The buttons clearly state their purpose, the first one 'How To Play' with a question mark icon and the other, 'Let's Play' with a game controller icon. The users are able to easily identify the purpose of the two buttons by the icons without having to read much further. The buttons are blue (#5D748D) with white bordering and font. When hovered over, the buttons will become white with blue (#5D748D) font to assure the user that the buttons are clickable and the user is about to select the correct one. 
+  - The homepage of the game consists of a solid blue (#5D748D) container (div) with white font for high accessibility. The h2 heading welcomes the user to the game and the h3 heading gives a brief explanation of the game's purpose. After the headings, there are only two buttons available to make the homepage look clean, neat, and minimalistic without trying to confuse or overwhelm the user. The buttons clearly state their purpose, the first one 'How To Play' with a question mark icon and the other, 'Let's Play' with a game controller icon. The users are able to easily identify the purpose of the two buttons by the icons without having to read much further. The buttons are blue (#5D748D) with white bordering and font. When hovered over, the buttons will become white with blue (#5D748D) font to assure the user that the buttons are clickable and the user is about to select the correct one. 
 
   ![Screenshot of the homepage](assets/documentation/features-homepage.png)
 
@@ -107,13 +107,13 @@ Test your geography skills with Geo Quiz! This game features three levels where 
   ![Screenshot of the modal window of instructions](assets/documentation/features-modal.png)
 
 - Question Area
-  - When the user clicks the 'Let's Play' button, the homepage container contents will be cleared out and the user will be shown the question area. The score count is at the top of the game, always starting at 0 to indicate a new game. The question will be shown below. There will be four buttons containing possible answers. The button style is similar to the homepage container: blue (#5D748D) with white bordering/font which becomes white and has blue (#5D748D) font when hovered over. The game and questions are fully responsive on mobile, tablet, laptop, and desktop viewports. 
+  - When the user clicks the 'Let's Play' button, the homepage container contents will be cleared out and the user will be shown the question area. The score count is at the top of the game, always starting at 0 to indicate a new game. The question will be shown below the score. There will be four buttons containing possible answers. The button style is similar to the homepage container: blue (#5D748D) with white bordering/font which becomes white and has blue (#5D748D) font when hovered over. The game and questions are fully responsive on mobile, tablet, laptop, and desktop viewports. 
 
   ![Screenshot of the question area](assets/documentation/features-buttons.png)
   ![Screenshot of the question area](assets/documentation/features-responsivebuttons.png)
 
 - Incorrect Answer
-  - When the user answers the question incorrectly, the game will immediately give feedback to the user apologizing and giving the correct answer of the question. The 'Next' button will then appear in darker blue (#254153). This shade of blue is used to help differentiate the purpose of the 'Next' button from the other buttons. The multiple choice buttons have been disabled so they will no longer be hovered over nor clickable, so the user is not able to cheat and try again. The 'Next' button will take the user to the next question. The purpose of the design to make the user click 'Next' first before moving onto the next question is to give the user time to read feedback and to re-read the question and the answer to allow the users to learn geography. 
+  - When the user answers the question incorrectly, the game will immediately give feedback to the user apologizing and giving the correct answer of the question. The 'Next' button will then appear in darker blue (#254153). This shade of blue is used to help differentiate the purpose of the 'Next' button from the other buttons. The multiple choice buttons have been disabled so they will no longer be hovered over nor clickable, so the user is not able to cheat and try again. The 'Next' button will take the user to the next question. The purpose of the design to make the user click 'Next' first before moving onto the next question is to give the user time to read feedback and to re-read the question and the answer to allow the users to learn possibly new geography facts. 
 
   ![Screenshot of an incorrect answer](assets/documentation/features-incorrectanswer.png)
 
@@ -133,12 +133,12 @@ Test your geography skills with Geo Quiz! This game features three levels where 
   ![Screenshot of level two completed](assets/documentation/features-leveltwocomplete.png)
 
 - Game Complete
-  - When the user completes the final round after scoring a minimum of 20 points, the game is complete. A medal icon is shown and the game congratulates the user. The game allows the user the option to play again, and warns the user that the 'Play Again' button will refresh the page to reset the score and reshuffle the quiz questions. A warning is shown to the user first because some users might find refreshing to be an inconvenience so it is better to have users prepared first. Therefore, it is best to explain the purpose of refreshing, which is to reset the score and reshuffle the quiz. The button will become white when hovered. 
+  - When the user completes the final round after scoring a minimum of 20 points, the game is complete. A medal icon is shown and the game congratulates the user. The game gives the user the option to play again, and warns the user that the 'Play Again' button will refresh the page to reset the score and reshuffle the quiz questions. A warning is shown to the user first because some users might find refreshing to be an inconvenience so it is better to have users prepared first. Therefore, it is best to explain the purpose of refreshing, which is to reset the score and reshuffle the quiz. The button will become white when hovered. 
 
   ![Screenshot of game completed](assets/documentation/features-gamecomplete.png)
 
 - Game Over 
-  - When the user fails to reach the minimum points to move onto the next level, a game over message will show with a sad face and an apologetic message. The game allows the user the option to play again, and again warns the user that the 'Play Again' button will refresh the page to reset the score and reshuffle the questions. The button will become white when hovered. 
+  - When the user fails to reach the minimum points to move onto the next level, a game over message will show with a sad face and an apologetic message. The game gives the user the option to play again, and again warns the user that the 'Play Again' button will refresh the page to reset the score and reshuffle the questions. The button will become white when hovered. 
 
   ![Screenshot of game over](assets/documentation/features-gameover.png)
 
@@ -159,10 +159,10 @@ Test your geography skills with Geo Quiz! This game features three levels where 
 * ### Frameworks, Libraries & Programs Used
 
   1. [Google Fonts](https://fonts.google.com/)
-      - Google Fonts was used to import the font Dosis. Information on Dosis for this README is also taken from Google Fonts.
+      - Google Fonts was used to import the font Dosis.
   
   2. [Font Awesome](https://fontawesome.com/) 
-      - Font Awesome was used throughout the website for their icons to make the page look more aesthetically pleasing.
+      - Font Awesome icons were used throughout the website to make the page look more aesthetically pleasing.
 
   3. [Balsamiq](https://www.balsamiq.com/)
       - Balsamiq was used to create low-fidelity wireframes of the website. 
@@ -214,7 +214,7 @@ The website was also tested on Lighthouse to test accessibility. When tested, ac
 
 * ### Unfixed Bugs
 
-- The main unfixed bug to mention is when the website is previewed on Google DevTools in the Surface Duo and Nest Hub viewports, the website is not very vertically responsive to these devices. The homepage container / question area will overlap the footer container. In the Nest Hub viewport, the 'Next' button will halfway inaccessible due to the footer container, creating a bad user experience. I tried to fix this bug by creating a height media query. However, when adding height media queries, the smaller devices such as iPhone SE and iPhone XR viewports got tampered with so I have decided to prioritize width responsiveness over height responsiveness since users will most likely be viewing from iPhone SE and iPhone XR devices than Nest Hub and Surface Duo devices. 
+- The main unfixed bug to mention is when the website is previewed on Google DevTools in the Surface Duo and Nest Hub viewports, the website is not very vertically responsive to these devices. The homepage container / question area will overlap the footer container. In the Nest Hub viewport, the 'Next' button will halfway inaccessible due to the footer container, creating a bad user experience. I tried to fix this bug by creating a height media query. However, when adding height media queries, the smaller devices such as iPhone SE and iPhone XR viewports got tampered with so I have decided to prioritize width responsiveness over height responsiveness since it is more likely that users will be viewing from iPhone SE and iPhone XR devices than Nest Hub and Surface Duo devices. 
 
 * ### Fixed Bugs
 
@@ -234,7 +234,7 @@ The website was also tested on Lighthouse to test accessibility. When tested, ac
 
 * ### Further Testing
 
-- The website has been tested on different browsers including Chrome, Safari, and Firefox. Large monitors (LG and Samsung), laptops (MacBook Early 2016, MacBook Pro 2020, ASUS 2021), tablets (iPad Pro), and devices (iPhone 13 Mini, iPhone 13, iPhone 12, iPhone 11, Samsung Galaxy A5, Xiaomi Redmi 9) have been used to check the quality and responsiveness of the game. The entire gameplay was perfectly responsive. 
+- The website has been tested on different browsers including Chrome, Safari, and Firefox. Large monitors (LG, Dell, Samsung), laptops (MacBook Early 2016, MacBook Pro 2020, ASUS 2021), tablets (iPad Pro), and devices (iPhone 13 Mini, iPhone 13, iPhone 12, iPhone 11, Samsung Galaxy A5, Xiaomi Redmi 9) have been used to check the quality and responsiveness of the game. The entire gameplay was perfectly responsive. 
 
 - Using Google DevTools, I have tested the responsiveness on all of the devices listed below. As mentioned earlier, Nest Hub and Surface Duo are not perfectly responsiveness due to the height viewports. 
 
