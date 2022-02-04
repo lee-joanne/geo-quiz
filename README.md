@@ -109,8 +109,8 @@ Test your geography skills with Geo Quiz! This game features three levels where 
 - Question Area
   - When the user clicks the 'Let's Play' button, the homepage container contents will be cleared out and the user will be shown the question area. The score count is at the top of the game, always starting at 0 to indicate a new game. The question will be shown below the score. There will be four buttons containing possible answers. The button style is similar to the homepage container: blue (#5D748D) with white bordering/font which becomes white and has blue (#5D748D) font when hovered over. The game and questions are fully responsive on mobile, tablet, laptop, and desktop viewports. 
 
-  ![Screenshot of the question area](assets/documentation/features-buttons.png)
-  ![Screenshot of the question area](assets/documentation/features-responsivebuttons.png)
+  ![Screenshot of the question area on larger screens](assets/documentation/features-buttons.png)
+  ![Screenshot of the question area on smaller screens](assets/documentation/features-responsivebuttons.png)
 
 - Incorrect Answer
   - When the user answers the question incorrectly, the game will immediately give feedback to the user apologizing and giving the correct answer to the question. The 'Next' button will then appear in darker blue (#254153). This shade of blue is used to help differentiate the purpose of the 'Next' button from the other buttons. The multiple-choice buttons have been disabled so they will no longer be hovered over nor clickable, so the user is not able to cheat and try again. The 'Next' button will take the user to the next question. The purpose of the design to make the user click 'Next' first before moving on to the next question is to give the user time to read feedback and to re-read the question and the answer to allow the users to learn possibly new geography facts. 

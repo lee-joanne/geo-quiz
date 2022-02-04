@@ -265,7 +265,6 @@ footer {
     #feedback-text {
         margin: 2% 0 7%;
     }
-
 }
 
 /* for media screens 705px wide and down */
@@ -302,7 +301,6 @@ footer {
     .footer-socialmedia i {
         padding: 4% 15%;
     }
-
 }
 
 /* for media screens 624px wide and down */
@@ -335,7 +333,6 @@ footer {
     #next-question {
         width: 150px;
     }
-
 }
 
 /* for media screens 380px wide and down */
@@ -356,7 +353,6 @@ footer {
     .modal-content {
         width: 85%;
     }
-
 }
 
 /* for media screens 320px wide and down (Am I Responsive mobile viewport) */
@@ -389,7 +385,6 @@ footer {
         font-size: 100%;
         padding: 0.25% 15%;
     }
-
 }
 
 /* for media screens 280px wide and down (Galaxy Fold viewport) */
@@ -400,5 +395,4 @@ footer {
         font-size: 150%;
         padding: 5% 15%;
     }
-
 }
