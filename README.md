@@ -1,5 +1,31 @@
 # Geo Quiz Website
 
+- [Geo Quiz Website](#geo-quiz-website)
+  * [User Experience (UX)](#user-experience--ux-)
+    + [User Stories](#user-stories)
+    + [Design](#design)
+    + [Wireframes](#wireframes)
+  * [Features](#features)
+    + [Existing Features](#existing-features)
+    + [Features Left to Implement](#features-left-to-implement)
+  * [Technologies Used](#technologies-used)
+    + [Languages Used](#languages-used)
+    + [Frameworks, Libraries & Programs Used](#frameworks--libraries---programs-used)
+  * [Testing](#testing)
+    + [Validator Testing](#validator-testing)
+    + [Accessibility Testing](#accessibility-testing)
+    + [Unfixed Bugs](#unfixed-bugs)
+    + [Fixed Bugs](#fixed-bugs)
+    + [Further Testing](#further-testing)
+  * [Deployment](#deployment)
+  * [Credits](#credits)
+  * [Code](#code)
+    + [Content](#content)
+    + [Media](#media)
+    + [Acknowledgements](#acknowledgements)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 Test your geography skills with Geo Quiz! This game features three levels where the questions become harder and harder, allowing users to really test their knowledge and hopefully learn new, fascinating facts about geography. There are ten questions in each round, totaling thirty multiple choice questions. The user must beat each level before moving onto the next, or else they will have to start over again.
 
 [View live project here](https://lee-joanne.github.io/geo-quiz/)
@@ -240,3 +266,78 @@ The website was deployed using GitHub Pages. The following steps were taken for 
   6. In Terminal, change the current working directory to the desired location of the cloned directory.
   7. Type git clone, and then paste the URL copied from GitHub earlier. 
   8. Type **Enter** to create the local clone. 
+
+  ## Credits
+
+* ## Code
+
+- Love Running Project: 
+    - Code from the Love Running footer was used to create the footer for this website. The social media icons, links, aria labels, and styles were used from the Love Running project.
+
+- Love Maths Project: 
+    - Code from the Love Maths project was taken, such as the function to increment the score when the user gets a correct answer and the DOMContentLoaded event listener. 
+
+- [CSS Scan](https://getcssscan.com/css-box-shadow-examples): 
+    - Code was taken from CSS Scan for the box shadowing around the homepage / question area container and buttons.
+
+- [Stack Overflow](https://stackoverflow.com/):
+    - Stack Overflow was referred to many times for the development of this website.
+    - Code from [this post](https://stackoverflow.com/questions/18806210/generating-non-repeating-random-numbers-in-js) was taken to shuffle the quiz questions in the question arrays. 
+    - Code from [this post](https://stackoverflow.com/questions/49589574/location-reload-in-addeventlistener) was taken to refresh the page when the event listener is clicked.
+    - Stack Overflow was looked at many times on how to get functions working in general, how to lay out the quiz question buttons, the idea behind the 'button-disabler' (pointer-events: none;) class in CSS file to disable the multiple choice buttons after user selection, etc. 
+
+- [W3 Schools](https://www.w3schools.com/):
+    - W3 Schools was also referred to many times for the development of this website, such as how to create event listeners, how to create functions, layout of the objects and arrays for the quiz questions, etc.
+    - Code from [this post](https://www.w3schools.com/howto/howto_css_modals.asp) was taken on how to create a functioning modal window for the 'How To Play' button.
+
+- [MDN Web Docs](https://developer.mozilla.org/en-US/):
+    - MDN Web Docs was referred to many times as well to create this website. 
+
+- [Sitepoint](https://www.sitepoint.com/simple-javascript-quiz/):
+    - Some code from Geo Quiz was inspired from this website on how to create a JavaScript game. This website helped create the first few functions and general blueprint of how to build the game. 
+
+- [ElectroBit](https://electrobit.hashnode.dev/making-a-quiz-game-with-javascript):
+    - The idea behind the 'hide' class feature in Geo Quiz was taken from this website on how to create a JavaScript quiz game. This class feature allowed me to call certain HTML elements in the JavaScript whenever I wanted to, to ensure the game worked smoothly.
+
+- Code Institute Tutor Support:
+    - Tutor Support was also very helpful in helping me get my functions going. I want to thank everyone who took their time to help me and send me useful links and helped me troubleshoot my code.
+
+- Code Institute: Slack Channel: Peer-Code-Review:
+    - I have referred to peer-code-review on Slack to gather ideas on my website. Most notably, I would like to thank [sharpryan20](https://sharpryan20.github.io/ci-project-2/) for the idea of providing feedback back to the user when the user selects an answer, whether it is correct or incorrect with the correct answer shown back to the user. 
+
+- Code Institute: [Dave Horrocks](https://github.com/DaveyJH):
+    - Dave Horrocks has been absolutely lovely and jumped on a few Slack calls with me to help walk me through some difficult JavaScript code. Dave helped me kick off the start process of building my website and was super thorough and explained JavaScript concepts very well. He helped me get my first few functions working.
+
+- Code Institute: Slack Channel:
+    - Ian Meigh who has helped me with my bug on the Slack channel about why my level two and three questions weren't being called after level one completed. Ian took the time to create a function using a Switch Statement which he kindly shared with me and inspired me to use more Switch Statements in this website. 
+
+- My Mentor:
+    - My mentor was a huge help in helping me troubleshoot some issues and going through my code together.
+
+* ### Content
+
+- Icons throughout the website are taken from [Font Awesome](https://fontawesome.com/).
+
+- The favicon for Geo Quiz was taken from [Favicon.io](https://favicon.io/emoji-favicons/globe-showing-americas/).
+
+- Information on the font, Dosis, is taken from [Google Fonts](https://fonts.google.com/specimen/Lora).
+
+ - The table of contents for this README.md was generated by [Ecotrust-Canada Markdown-toc](https://ecotrust-canada.github.io/markdown-toc/).
+
+- Information on how to clone is taken from [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
+
+- I came up with random questions for the quiz game and [Google](www.google.ca) was used to confirm the correct answers. 
+
+* ### Media
+
+  - Background image for the website is taken from [Pexels](https://www.pexels.com/).
+
+* ### Acknowledgements 
+
+  - My mentor for all of his wonderful feedback, helping me with kicking off the coding process, and helping me tackle JavaScript. 
+
+  - Everyone in the Code Institute Slack channel who took their free time to answer my queries and help me throughout my project.
+
+  - The Code Institute tutors who have helped me feel at ease with my JavaScript worries and giving me their helping hand.
+
+  - Dave Horrocks for all of his hard work and dedication to helping all of us in need, taking his free time to jump in meetings with us to walk us through our code.
