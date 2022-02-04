@@ -1,4 +1,3 @@
-// Global variables
 let homepageContainer = document.getElementById("homepage-container");
 let startButton = document.getElementById("start");
 let choiceButtons = document.getElementsByClassName("choice-btn");
