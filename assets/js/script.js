@@ -86,8 +86,8 @@ function showGameBoard() {
 }
 
 /**
- * LevelOne, levelTwo, levelThree quesions from questions.js file iterating depending on currentRound.
- * textContent of question and options become visible. 
+ * LevelOne, levelTwo, levelThree questions from questions.js file will iterate depending on currentRound.
+ * textContent of quiz question and options become visible to the user.
  * When x>10, runs `scoreRequirementConditionCheck()` and `resetQuestionIndex()`
  * Runs `buttonCheckAnswer()`.
  */
@@ -124,7 +124,7 @@ function showQuestions() {
 
 /**
  * Iterates through choiceButtons.
- * Event listener runs `checkAnswer()`.
+ * choiceButtons event listener runs `checkAnswer()`.
  */
 function buttonCheckAnswer() {
     for (let i = 0; i < choiceButtons.length; i++) {
@@ -133,7 +133,7 @@ function buttonCheckAnswer() {
 }
 
 /**
- * Switch statement which checks the score of the game.
+ * Switch statement will check the current score of the game.
  * If user scores equal to and above 6, user can proceed to level 2.
  * If user scores equal to and above 12, user can proceed to level 3.
  * If user scores equal to and above 20, user has completed the game.
